@@ -122,4 +122,4 @@ Please use the Github issues.
 ## RoadMap
 
 - I am planning to improve myself on AWS Lambda Functions.
-- CCC, CQRS, DDD Archs will be implemented
+- CCC, CQRS, DDD Archs will be implemented (<https://github.com/kgrzybek/sample-dotnet-core-cqrs-api>)
