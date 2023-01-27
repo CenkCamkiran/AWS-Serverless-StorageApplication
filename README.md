@@ -10,7 +10,7 @@ Build GUID generator via AWS Lambda Function.
 
 ## Contents
 
-- [Simple Guid Generator With AWS Lambda Function](#simple-guid-generator-with-aws-lambda-function)
+- [Storage Application With AWS Serverless](#storage-application-with-aws-serverless)
   - [Abstract](#abstract)
   - [Philosophy](#philosophy)
   - [Contents](#contents)
@@ -122,3 +122,4 @@ Please use the Github issues.
 ## RoadMap
 
 - I am planning to improve myself on AWS Lambda Functions.
+- CCC, CQRS, DDD Archs will be implemented
