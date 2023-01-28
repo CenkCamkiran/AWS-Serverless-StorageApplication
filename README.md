@@ -122,4 +122,5 @@ Please use the Github issues.
 ## RoadMap
 
 - I am planning to improve myself on AWS Lambda Functions.
-- CCC, CQRS, DDD Archs will be implemented (<https://github.com/kgrzybek/sample-dotnet-core-cqrs-api>)
+- CQRS, DDD Archs will be implemented (<https://github.com/kgrzybek/sample-dotnet-core-cqrs-api>)
+- Event Sourcing <https://www.gencayyildiz.com/blog/asp-net-core-event-store-ile-event-sourcing-uygulamasiorneklendirme/>
