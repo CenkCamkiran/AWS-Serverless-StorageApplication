@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AWS_Serverless_StorageApplication.Models
+﻿namespace AWS_Serverless_StorageApplication.Models
 {
-    public class FileDetails
+    public class ObjectDetails
     {
         public long SizeInBytes { get; set; }
         public string Name { get; set; } = string.Empty;

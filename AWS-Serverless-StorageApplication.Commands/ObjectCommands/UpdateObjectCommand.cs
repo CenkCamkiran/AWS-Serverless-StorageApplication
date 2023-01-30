@@ -1,14 +1,8 @@
-﻿using AWS_Serverless_StorageApplication.Models;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
-namespace AWS_Serverless_StorageApplication.Commands
+namespace AWS_Serverless_StorageApplication.Commands.ObjectCommands
 {
-    public class UpdateObjectCommand: IRequest<string>
+    public class UpdateObjectCommand : IRequest<string>
     {
         public long SizeInBytes { get; set; }
         public string Name { get; set; } = string.Empty;

@@ -1,3 +1,8 @@
+using AWS_Serverless_StorageApplication.Repositories.Interfaces;
+using AWS_Serverless_StorageApplication.Repositories.Repositories;
+using MediatR;
+using System.Reflection;
+
 namespace AWS_Serverless_StorageApplication;
 
 public class Startup
@@ -12,6 +17,8 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddMediatR(Assembly.GetExecutingAssembly());
+        services.AddScoped<IS3ObjectStorageRepository, S3ObjectStorageRepository>();
         services.AddControllers();
     }
 
@@ -27,7 +34,7 @@ public class Startup
 
         app.UseRouting();
 
-        app.UseAuthorization();
+        //app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
         {

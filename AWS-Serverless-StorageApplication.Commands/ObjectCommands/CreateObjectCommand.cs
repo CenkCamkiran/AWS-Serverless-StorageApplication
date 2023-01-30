@@ -1,15 +1,9 @@
 ﻿using AWS_Serverless_StorageApplication.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AWS_Serverless_StorageApplication.Commands
+namespace AWS_Serverless_StorageApplication.Commands.ObjectCommands
 {
-    public class UploadObjectCommand : IRequest<FileDetails>
+    public class CreateObjectCommand : IRequest<ObjectDetails>
     {
         public long SizeInBytes { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -17,7 +11,7 @@ namespace AWS_Serverless_StorageApplication.Commands
         public DateTime CreateDate { get; set; }
         public Dictionary<string, string> MetaData { get; set; } = new Dictionary<string, string>();
 
-        public UploadObjectCommand(long sizeInBytes, string name, string contentType, DateTime createDate, Dictionary<string, string> metaData)
+        public CreateObjectCommand(long sizeInBytes, string name, string contentType, DateTime createDate, Dictionary<string, string> metaData)
         {
             SizeInBytes = sizeInBytes;
             Name = name;

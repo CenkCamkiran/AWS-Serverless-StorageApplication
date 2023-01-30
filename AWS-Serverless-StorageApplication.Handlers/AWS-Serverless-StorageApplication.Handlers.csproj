@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,5 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.Commands\AWS-Serverless-StorageApplication.Commands.csproj" />
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj" />
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.Queries\AWS-Serverless-StorageApplication.Queries.csproj" />
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.Repositories\AWS-Serverless-StorageApplication.Repositories.csproj" />
+  </ItemGroup>
 
 </Project>
