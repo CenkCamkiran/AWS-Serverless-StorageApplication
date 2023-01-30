@@ -5,19 +5,19 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication", "AWS-Serverless-StorageApplication\AWS-Serverless-StorageApplication.csproj", "{164BEDAE-85EE-4111-A30E-4966DB8E1E78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Commands", "AWS-Serverless-StorageApplication.Commands\AWS-Serverless-StorageApplication.Commands.csproj", "{A52D3FA5-DF36-4D8A-9951-890AC2F495CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Commands", "AWS-Serverless-StorageApplication.Commands\AWS-Serverless-StorageApplication.Commands.csproj", "{A52D3FA5-DF36-4D8A-9951-890AC2F495CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Controllers", "AWS-Serverless-StorageApplication.Controllers\AWS-Serverless-StorageApplication.Controllers.csproj", "{FDA3EED5-CB1F-413F-B2D0-5519248A8EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Controllers", "AWS-Serverless-StorageApplication.Controllers\AWS-Serverless-StorageApplication.Controllers.csproj", "{FDA3EED5-CB1F-413F-B2D0-5519248A8EA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Data", "AWS-Serverless-StorageApplication.Data\AWS-Serverless-StorageApplication.Data.csproj", "{9CEC471D-EF2C-46BA-81C4-D9D924B20FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Handlers", "AWS-Serverless-StorageApplication.Handlers\AWS-Serverless-StorageApplication.Handlers.csproj", "{01D82290-08CF-4164-92BD-34871B5036A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Handlers", "AWS-Serverless-StorageApplication.Handlers\AWS-Serverless-StorageApplication.Handlers.csproj", "{01D82290-08CF-4164-92BD-34871B5036A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Models", "AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj", "{433B05F0-A4A5-4B31-8BF4-89A1BC679A23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Models", "AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj", "{433B05F0-A4A5-4B31-8BF4-89A1BC679A23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Queries", "AWS-Serverless-StorageApplication.Queries\AWS-Serverless-StorageApplication.Queries.csproj", "{07CE96C6-E5BC-4350-8B17-C96A6C294CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Queries", "AWS-Serverless-StorageApplication.Queries\AWS-Serverless-StorageApplication.Queries.csproj", "{07CE96C6-E5BC-4350-8B17-C96A6C294CC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Repositories", "AWS-Serverless-StorageApplication.Repositories\AWS-Serverless-StorageApplication.Repositories.csproj", "{0D8E5500-8473-4136-BAA5-439EF5743F0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Repositories", "AWS-Serverless-StorageApplication.Repositories\AWS-Serverless-StorageApplication.Repositories.csproj", "{0D8E5500-8473-4136-BAA5-439EF5743F0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Middleware", "AWS-Serverless-StorageApplication.Middleware\AWS-Serverless-StorageApplication.Middleware.csproj", "{73952168-B6F0-4DEF-AD6D-65CA3172C218}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{FDA3EED5-CB1F-413F-B2D0-5519248A8EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA3EED5-CB1F-413F-B2D0-5519248A8EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA3EED5-CB1F-413F-B2D0-5519248A8EA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CEC471D-EF2C-46BA-81C4-D9D924B20FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CEC471D-EF2C-46BA-81C4-D9D924B20FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CEC471D-EF2C-46BA-81C4-D9D924B20FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CEC471D-EF2C-46BA-81C4-D9D924B20FA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01D82290-08CF-4164-92BD-34871B5036A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01D82290-08CF-4164-92BD-34871B5036A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D82290-08CF-4164-92BD-34871B5036A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{0D8E5500-8473-4136-BAA5-439EF5743F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8E5500-8473-4136-BAA5-439EF5743F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8E5500-8473-4136-BAA5-439EF5743F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
