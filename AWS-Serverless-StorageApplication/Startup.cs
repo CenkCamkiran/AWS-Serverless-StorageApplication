@@ -1,3 +1,6 @@
+using Amazon.S3;
+using AWS_Serverless_StorageApplication.EnvConfiguration;
+using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using AWS_Serverless_StorageApplication.Repositories.Repositories;
 using MediatR;
@@ -19,6 +22,13 @@ public class Startup
     {
         services.AddMediatR(Assembly.GetExecutingAssembly());
         services.AddScoped<IS3ObjectStorageRepository, S3ObjectStorageRepository>();
+
+        EnvVariablesConfiguration envVariables = new EnvVariablesConfiguration();
+        AWSCredentials awsCredentials = envVariables.AWSCredentials();
+
+        IAmazonS3 client = new AmazonS3Client(awsCredentials.AccessKey, awsCredentials.SecretKey);
+        services.AddSingleton<IAmazonS3>(client);
+
         services.AddControllers();
     }
 

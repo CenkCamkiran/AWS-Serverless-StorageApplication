@@ -13,9 +13,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="7.3.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.102" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.EnvConfiguration\AWS-Serverless-StorageApplication.EnvConfiguration.csproj" />
     <ProjectReference Include="..\AWS-Serverless-StorageApplication.Repositories\AWS-Serverless-StorageApplication.Repositories.csproj" />
   </ItemGroup>
 </Project>

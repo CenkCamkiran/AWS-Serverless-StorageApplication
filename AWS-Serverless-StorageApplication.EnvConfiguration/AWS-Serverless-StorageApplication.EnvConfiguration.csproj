@@ -2,14 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>AWS_Serverless_StorageApplication.Repositories</RootNamespace>
+    <RootNamespace>AWS_Serverless_StorageApplication.EnvConfiguration</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AWSSDK.S3" Version="3.7.102" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj" />

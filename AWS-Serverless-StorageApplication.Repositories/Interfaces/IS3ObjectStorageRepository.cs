@@ -8,7 +8,7 @@ namespace AWS_Serverless_StorageApplication.Repositories.Interfaces
         Task<List<ObjectDetails>> GetObjectList();
         Task<string> DeleteObject(string guid);
         Task<string> UpdateObject(ObjectDetails guid);
-        Task<ObjectDetails> CreateObject(ObjectDetails fileDetails);
+        Task<int> CreateObject(ObjectDetails fileDetails);
 
     }
 }

@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageAppli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Repositories", "AWS-Serverless-StorageApplication.Repositories\AWS-Serverless-StorageApplication.Repositories.csproj", "{0D8E5500-8473-4136-BAA5-439EF5743F0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Middleware", "AWS-Serverless-StorageApplication.Middleware\AWS-Serverless-StorageApplication.Middleware.csproj", "{73952168-B6F0-4DEF-AD6D-65CA3172C218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Middleware", "AWS-Serverless-StorageApplication.Middleware\AWS-Serverless-StorageApplication.Middleware.csproj", "{73952168-B6F0-4DEF-AD6D-65CA3172C218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.EnvConfiguration", "AWS-Serverless-StorageApplication.EnvConfiguration\AWS-Serverless-StorageApplication.EnvConfiguration.csproj", "{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73952168-B6F0-4DEF-AD6D-65CA3172C218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

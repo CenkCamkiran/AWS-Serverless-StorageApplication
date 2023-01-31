@@ -99,6 +99,35 @@
           }
         }
       },
+      "AWSSDK.Core/3.7.103.24": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.102": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.103.24, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "MediatR/11.0.0": {
         "type": "package",
         "dependencies": {
@@ -293,6 +322,19 @@
           }
         }
       },
+      "AWS-Serverless-StorageApplication.EnvConfiguration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
+        }
+      },
       "AWS-Serverless-StorageApplication.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -307,7 +349,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AWS-Serverless-StorageApplication.Models": "1.0.0"
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "AWSSDK.S3": "3.7.102"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Repositories.dll": {}
@@ -415,6 +458,35 @@
           }
         }
       },
+      "AWSSDK.Core/3.7.103.24": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.102": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.103.24, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "MediatR/11.0.0": {
         "type": "package",
         "dependencies": {
@@ -609,6 +681,19 @@
           }
         }
       },
+      "AWS-Serverless-StorageApplication.EnvConfiguration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
+        }
+      },
       "AWS-Serverless-StorageApplication.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -623,7 +708,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AWS-Serverless-StorageApplication.Models": "1.0.0"
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "AWSSDK.S3": "3.7.102"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Repositories.dll": {}
@@ -725,6 +811,58 @@
         "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.xml",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.xml"
+      ]
+    },
+    "AWSSDK.Core/3.7.103.24": {
+      "sha512": "1Ft8nbvxsqWgY3yTyVaovdc0yYQe1QPVLjbgdcmdpebQ8SeKDnhvAKCo3FdVdO4UPxcNW2BDN9cJx3bu3qZbtw==",
+      "type": "package",
+      "path": "awssdk.core/3.7.103.24",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.103.24.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.S3/3.7.102": {
+      "sha512": "n9/d8PYXM0abAH11R2efKNMCjQZ3Jffw39BEpHdpn+wmF87PwCiffXgCL+HHFIt3S2O50cuHX3xqRmX4XvOvYA==",
+      "type": "package",
+      "path": "awssdk.s3/3.7.102",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
+        "awssdk.s3.3.7.102.nupkg.sha512",
+        "awssdk.s3.nuspec",
+        "lib/net35/AWSSDK.S3.dll",
+        "lib/net35/AWSSDK.S3.pdb",
+        "lib/net35/AWSSDK.S3.xml",
+        "lib/net45/AWSSDK.S3.dll",
+        "lib/net45/AWSSDK.S3.pdb",
+        "lib/net45/AWSSDK.S3.xml",
+        "lib/netcoreapp3.1/AWSSDK.S3.dll",
+        "lib/netcoreapp3.1/AWSSDK.S3.pdb",
+        "lib/netcoreapp3.1/AWSSDK.S3.xml",
+        "lib/netstandard2.0/AWSSDK.S3.dll",
+        "lib/netstandard2.0/AWSSDK.S3.pdb",
+        "lib/netstandard2.0/AWSSDK.S3.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "MediatR/11.0.0": {
@@ -952,6 +1090,11 @@
         "version.txt"
       ]
     },
+    "AWS-Serverless-StorageApplication.EnvConfiguration/1.0.0": {
+      "type": "project",
+      "path": "../AWS-Serverless-StorageApplication.EnvConfiguration/AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
+      "msbuildProject": "../AWS-Serverless-StorageApplication.EnvConfiguration/AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
+    },
     "AWS-Serverless-StorageApplication.Models/1.0.0": {
       "type": "project",
       "path": "../AWS-Serverless-StorageApplication.Models/AWS-Serverless-StorageApplication.Models.csproj",
@@ -965,25 +1108,32 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AWS-Serverless-StorageApplication.EnvConfiguration >= 1.0.0",
       "AWS-Serverless-StorageApplication.Repositories >= 1.0.0",
+      "AWSSDK.S3 >= 3.7.102",
       "Amazon.Lambda.AspNetCoreServer >= 7.3.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\camki\\.nuget\\packages\\": {}
+    "C:\\Users\\ccamkiran\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
+      "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
       "projectName": "AWS-Serverless-StorageApplication",
-      "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
-      "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\obj\\",
+      "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
+      "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -997,8 +1147,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
-              "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
+            "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
+              "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
+            },
+            "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
+              "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
             }
           }
         }
@@ -1013,6 +1166,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AWSSDK.S3": {
+            "target": "Package",
+            "version": "[3.7.102, )"
+          },
           "Amazon.Lambda.AspNetCoreServer": {
             "target": "Package",
             "version": "[7.3.0, )"
@@ -1035,36 +1192,20 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.12, 6.0.12]"
-          },
-          {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.12, 6.0.12]"
+            "version": "[6.0.11, 6.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-            "version": "[6.0.12, 6.0.12]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.12, 6.0.12]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.12, 6.0.12]"
+            "version": "[6.0.11, 6.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.12, 6.0.12]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.12, 6.0.12]"
+            "version": "[6.0.11, 6.0.11]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.12, 6.0.12]"
+            "version": "[6.0.11, 6.0.11]"
           }
         ],
         "frameworkReferences": {
@@ -1075,7 +1216,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
