@@ -3,21 +3,17 @@ using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Commands.ObjectCommands
 {
-    public class CreateObjectCommand : IRequest<ObjectDetails>
+    public class CreateObjectCommand : IRequest<int>
     {
-        public long SizeInBytes { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string ContentType { get; set; } = string.Empty;
-        public DateTime CreateDate { get; set; }
-        public Dictionary<string, string> MetaData { get; set; } = new Dictionary<string, string>();
+        public string BucketName { get; set; } = string.Empty;
+        public ObjectDetails ObjectDetails { get; set; }
+        public Stream ObjectStream { get; set; }
 
-        public CreateObjectCommand(long sizeInBytes, string name, string contentType, DateTime createDate, Dictionary<string, string> metaData)
+        public CreateObjectCommand(string bucketName, ObjectDetails objectDetails, Stream objectStream)
         {
-            SizeInBytes = sizeInBytes;
-            Name = name;
-            ContentType = contentType;
-            CreateDate = createDate;
-            MetaData = metaData;
+            BucketName = bucketName;
+            ObjectDetails = objectDetails;
+            ObjectStream = objectStream;
         }
     }
 }

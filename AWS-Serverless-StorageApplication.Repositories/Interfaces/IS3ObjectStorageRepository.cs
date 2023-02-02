@@ -1,14 +1,16 @@
-﻿using AWS_Serverless_StorageApplication.Models;
+﻿using Amazon.S3.Model;
+using AWS_Serverless_StorageApplication.Models;
 
 namespace AWS_Serverless_StorageApplication.Repositories.Interfaces
 {
     public interface IS3ObjectStorageRepository
     {
-        Task<ObjectDetails> GetObject(string guid);
-        Task<List<ObjectDetails>> GetObjectList();
-        Task<string> DeleteObject(string guid);
-        Task<string> UpdateObject(ObjectDetails guid);
-        Task<int> CreateObject(ObjectDetails fileDetails);
-
+        Task<GetObjectResponse> GetObject(string bucketName, string objectName);
+        Task<List<S3Object>> GetObjectList(string bucketName);
+        Task<int> DeleteObject(string bucketName, string objectName);
+        Task<int> CreateObject(string bucketName, ObjectDetails fileDetails, Stream stream);
+        Task<int> CreateBucket(string bucketName);
+        Task<int> DeleteBucket(string bucketName);
+        Task<List<S3Bucket>> ListBuckets();
     }
 }

@@ -5,7 +5,7 @@ using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
 {
-    public class CreateObjectHandler : IRequestHandler<CreateObjectCommand, ObjectDetails>
+    public class CreateObjectHandler : IRequestHandler<CreateObjectCommand, int>
     {
 
         private readonly IS3ObjectStorageRepository _s3ObjectStorageRepository;
@@ -15,18 +15,18 @@ namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
             _s3ObjectStorageRepository = s3ObjectStorageRepository;
         }
 
-        public async Task<ObjectDetails> Handle(CreateObjectCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateObjectCommand request, CancellationToken cancellationToken)
         {
-            ObjectDetails fileDetails = new ObjectDetails()
+            ObjectDetails objectInfo = new ObjectDetails()
             {
-                SizeInBytes = request.SizeInBytes,
-                ContentType = request.ContentType,
-                CreateDate = request.CreateDate,
-                MetaData = request.MetaData,
-                Name = request.Name
+                SizeInBytes = request.ObjectDetails.SizeInBytes,
+                ContentType = request.ObjectDetails.ContentType,
+                CreateDate = request.ObjectDetails.CreateDate,
+                MetaData = request.ObjectDetails.MetaData,
+                Name = request.ObjectDetails.Name
             };
 
-            return await _s3ObjectStorageRepository.CreateObject(fileDetails);
+            return await _s3ObjectStorageRepository.CreateObject(request.BucketName, objectInfo, request.ObjectStream);
         }
     }
 }

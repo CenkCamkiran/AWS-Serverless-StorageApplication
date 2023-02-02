@@ -1,7 +1,13 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
+using AWS_Serverless_StorageApplication.Helpers;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
+using Newtonsoft.Json;
+using System;
+using System.Net;
+using System.Runtime.Intrinsics.X86;
+using System.Security.AccessControl;
 
 namespace AWS_Serverless_StorageApplication.Repositories.Repositories
 {
@@ -16,46 +22,158 @@ namespace AWS_Serverless_StorageApplication.Repositories.Repositories
             _amazonS3Client = amazonS3Client;
         }
 
-        public async Task<int> CreateObject(ObjectDetails fileDetails)
+        public async Task<int> CreateObject(string bucketName, ObjectDetails fileDetails, Stream stream)
+        {
+            stream.Position = 0;
+
+            try
+            {
+                await _amazonS3Client.EnsureBucketExistsAsync(bucketName);
+
+                PutObjectRequest request = new PutObjectRequest();
+                request.BucketName = bucketName;
+                request.ContentType = fileDetails.ContentType;
+                request.Key = fileDetails.Name;
+                request.InputStream = stream;
+                request.Headers.ContentLength = fileDetails.SizeInBytes;
+                foreach(var item in fileDetails.MetaData)
+                    request.Metadata.Add(item.Key, item.Value);
+
+                var response = await _amazonS3Client.PutObjectAsync(request);
+                
+                return (int)response.HttpStatusCode;
+
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
+        }
+
+        public async Task<int> DeleteObject(string bucketName, string objectName)
+        {
+            try
+            {
+                await _amazonS3Client.EnsureBucketExistsAsync(bucketName);
+                var response = await _amazonS3Client.DeleteObjectAsync(bucketName, objectName);
+
+                return (int)response.HttpStatusCode;
+
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
+        }
+
+        public async Task<GetObjectResponse> GetObject(string bucketName, string objectName)
+        {
+            try
+            {
+                await _amazonS3Client.EnsureBucketExistsAsync(bucketName);
+                var response = await _amazonS3Client.GetObjectAsync(bucketName, objectName);
+
+                return response;
+
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
+        }
+
+        public async Task<List<S3Object>> GetObjectList(string bucketName)
         {
             try
             {
                 await _amazonS3Client.EnsureBucketExistsAsync("file_storage");
 
-                PutObjectRequest request = new PutObjectRequest();
-                request.
+                ListObjectsV2Request request = new ListObjectsV2Request
+                {
+                    BucketName = bucketName,
+                    MaxKeys = 1000,
+                };
+                //_amazonS3Client.ListObjectsAsync(bucketName);
+                var response = await _amazonS3Client.ListObjectsV2Async(request);
 
-                var response = await _amazonS3Client.PutObjectAsync();
+                return response.S3Objects;
+
             }
             catch (Exception exception)
             {
-                //Logging
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
             }
-            throw new NotImplementedException();
         }
 
-        public async Task<string> DeleteObject(string guid)
+        public async Task<int> DeleteBucket(string bucketName)
         {
-            await _amazonS3.EnsureBucketExistsAsync("file_storage");
-            throw new NotImplementedException();
+            try
+            {
+                var response = await _amazonS3Client.DeleteBucketAsync(bucketName);
+
+                return (int)response.HttpStatusCode;
+
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
         }
 
-        public async Task<ObjectDetails> GetObject(string guid)
+        public async Task<int> CreateBucket(string bucketName)
         {
-            await _amazonS3.EnsureBucketExistsAsync("file_storage");
-            throw new NotImplementedException();
+            try
+            {
+                var response = await _amazonS3Client.PutBucketAsync(bucketName);
+
+                return (int)response.HttpStatusCode;
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
         }
 
-        public async Task<List<ObjectDetails>> GetObjectList()
+        public async Task<List<S3Bucket>> ListBuckets()
         {
-            await _amazonS3.EnsureBucketExistsAsync("file_storage");
-            throw new NotImplementedException();
-        }
+            try
+            {
+                var response = await _amazonS3Client.ListBucketsAsync();
 
-        public async Task<string> UpdateObject(ObjectDetails guid)
-        {
-            await _amazonS3.EnsureBucketExistsAsync("file_storage");
-            throw new NotImplementedException();
+                return response.Buckets;
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
         }
     }
 }
