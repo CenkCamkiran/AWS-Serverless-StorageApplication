@@ -3,6 +3,7 @@ using AWS_Serverless_StorageApplication.Commands.BucketCommands;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Queries.BucketQueries;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AWS_Serverless_StorageApplication.Controllers
@@ -27,6 +28,8 @@ namespace AWS_Serverless_StorageApplication.Controllers
         }
 
         [HttpPut("{bucketname}")]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //Task<IActionResult>
         public async Task<BucketResponse> CreateBucket(string bucketname)
         {
             int response = await _mediator.Send(new CreateBucketCommand(bucketname));
