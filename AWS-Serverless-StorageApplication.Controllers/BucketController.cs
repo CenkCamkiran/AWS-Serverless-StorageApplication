@@ -5,7 +5,7 @@ using AWS_Serverless_StorageApplication.Queries.BucketQueries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AWS_Serverless_StorageApplication.Controllers.BucketControllers
+namespace AWS_Serverless_StorageApplication.Controllers
 {
     [Route("api/main/[controller]")]
     [ApiController]
@@ -26,7 +26,7 @@ namespace AWS_Serverless_StorageApplication.Controllers.BucketControllers
             return bucketList;
         }
 
-        [HttpPut("bucket/{bucketname}")]
+        [HttpPut("{bucketname}")]
         public async Task<BucketResponse> CreateBucket(string bucketname)
         {
             int response = await _mediator.Send(new CreateBucketCommand(bucketname));
@@ -39,7 +39,7 @@ namespace AWS_Serverless_StorageApplication.Controllers.BucketControllers
             return bucketResponse;
         }
 
-        [HttpDelete("bucket/{bucketname}")]
+        [HttpDelete("{bucketname}")]
         public async Task<BucketResponse> DeleteBucket(string bucketname)
         {
             int response = await _mediator.Send(new DeleteBucketCommand(bucketname));

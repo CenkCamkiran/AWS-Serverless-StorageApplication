@@ -5,7 +5,7 @@ using AWS_Serverless_StorageApplication.Queries.ObjectQueries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AWS_Serverless_StorageApplication.Controllers.ObjectControllers
+namespace AWS_Serverless_StorageApplication.Controllers
 {
     [Route("api/main/[controller]")]
     [ApiController]
