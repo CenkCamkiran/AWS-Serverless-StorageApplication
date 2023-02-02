@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AWS_Serverless_StorageApplication.Models
+﻿namespace AWS_Serverless_StorageApplication.Models
 {
     public class AWSCredentials
     {

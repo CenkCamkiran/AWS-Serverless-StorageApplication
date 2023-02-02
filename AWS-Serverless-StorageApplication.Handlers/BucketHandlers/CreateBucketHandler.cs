@@ -1,11 +1,6 @@
 ﻿using AWS_Serverless_StorageApplication.Commands.BucketCommands;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AWS_Serverless_StorageApplication.Handlers.BucketHandlers
 {

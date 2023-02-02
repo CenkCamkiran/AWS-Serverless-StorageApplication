@@ -4,10 +4,7 @@ using AWS_Serverless_StorageApplication.Helpers;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using Newtonsoft.Json;
-using System;
 using System.Net;
-using System.Runtime.Intrinsics.X86;
-using System.Security.AccessControl;
 
 namespace AWS_Serverless_StorageApplication.Repositories.Repositories
 {
@@ -36,11 +33,11 @@ namespace AWS_Serverless_StorageApplication.Repositories.Repositories
                 request.Key = fileDetails.Name;
                 request.InputStream = stream;
                 request.Headers.ContentLength = fileDetails.SizeInBytes;
-                foreach(var item in fileDetails.MetaData)
+                foreach (var item in fileDetails.MetaData)
                     request.Metadata.Add(item.Key, item.Value);
 
                 var response = await _amazonS3Client.PutObjectAsync(request);
-                
+
                 return (int)response.HttpStatusCode;
 
             }

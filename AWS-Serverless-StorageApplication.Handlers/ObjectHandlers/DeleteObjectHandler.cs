@@ -1,5 +1,4 @@
 ﻿using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
-using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using MediatR;
 using System.Net;

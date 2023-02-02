@@ -1,5 +1,7 @@
-﻿using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
+﻿using Amazon.S3.Model;
+using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
 using AWS_Serverless_StorageApplication.Models;
+using AWS_Serverless_StorageApplication.Queries.ObjectQueries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,40 +19,40 @@ namespace AWS_Serverless_StorageApplication.Controllers.ObjectControllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<List<ObjectDetails>> GetObjectList()
+        [HttpGet("objectlist/bucketname/{bucketname}")]
+        public async Task<List<S3Object>> GetObjectList(string bucketname)
         {
-            List<ObjectDetails> objectList = await _mediator.Send(new GetObjectListQuery());
+            List<S3Object> objectList = await _mediator.Send(new GetObjectListQuery(bucketname));
 
             return objectList;
         }
 
-        [HttpGet("Name/{Id}")]
-        public async Task<ObjectDetails> GetObject(string Id)
+        [HttpGet("bucketname/{bucketname}/object/{objectname}")]
+        public async Task<GetObjectResponse> GetObject(string bucketname, string objectname)
         {
-            ObjectDetails objectDetails = await _mediator.Send(new GetObjectQuery() { Guid = Id });
+            GetObjectResponse objectResponse = await _mediator.Send(new GetObjectQuery(bucketname, objectname));
 
-            return objectDetails;
+            return objectResponse;
         }
 
-        [HttpPut]
-        public async Task<ObjectDetails> CreateObject([FromForm] ObjectDetails objectDetails)
-        {
-            return null;
-        }
+        //[HttpPut]
+        //public async Task<ObjectDetails> CreateObject([FromForm] ObjectDetails objectDetails)
+        //{
+        //    return null;
+        //}
 
-        [HttpPost("Name/{Id}")]
-        public async Task<ObjectDetails> UpdateObject([FromForm] ObjectDetails objectDetails, string Id)
+        [HttpDelete("bucketname/{bucketname}/object/{objectname}")]
+        public async Task<ObjectResponse> DeleteObject(string bucketname, string objectname)
         {
-            return null;
-        }
+            int response = await _mediator.Send(new DeleteObjectCommand(bucketname, objectname));
 
-        [HttpDelete("Name/{Id}")]
-        public async Task<string> DeleteObject(string Id)
-        {
-            var result = await _mediator.Send(new DeleteObjectCommand(Id));
+            ObjectResponse objectResponse = new ObjectResponse();
+            objectResponse.ObjectName = objectname;
+            objectResponse.BucketName = bucketname;
+            objectResponse.ResponseCode = response;
+            objectResponse.ResponseDescription = "Object deleted successfully!";
 
-            return result;
+            return objectResponse;
         }
 
     }

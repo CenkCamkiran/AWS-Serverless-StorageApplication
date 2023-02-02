@@ -1,13 +1,7 @@
 ﻿using Amazon.S3.Model;
-using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
 using AWS_Serverless_StorageApplication.Queries.BucketQueries;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AWS_Serverless_StorageApplication.Handlers.BucketHandlers
 {

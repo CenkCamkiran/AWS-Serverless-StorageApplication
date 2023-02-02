@@ -1,5 +1,4 @@
 ﻿using Amazon.S3.Model;
-using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Queries.ObjectQueries;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using MediatR;

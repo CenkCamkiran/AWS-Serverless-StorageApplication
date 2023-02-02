@@ -1,8 +1,8 @@
 ﻿namespace AWS_Serverless_StorageApplication.Models
 {
-    public class StorageApplicationError
+    public class BaseResponse
     {
         public int ResponseCode { get; set; }
-        public string Message { get; set; } = string.Empty;
+        public string ResponseDescription { get; set; } = string.Empty;
     }
 }
