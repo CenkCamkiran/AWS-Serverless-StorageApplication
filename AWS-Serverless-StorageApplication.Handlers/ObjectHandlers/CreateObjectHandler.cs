@@ -32,7 +32,7 @@ namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
             int response = await _s3ObjectStorageRepository.CreateObjectAsync(request.BucketName, objectInfo, request.ObjectStream);
 
             ObjectResponse objectResponse = new ObjectResponse();
-            if (response == (int) HttpStatusCode.OK)
+            if (response == (int)HttpStatusCode.OK)
             {
                 objectResponse.BucketName = request.BucketName;
                 objectResponse.ResponseCode = response;

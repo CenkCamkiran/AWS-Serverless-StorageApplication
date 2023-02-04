@@ -1,10 +1,10 @@
 using Amazon;
 using Amazon.S3;
 using AWS_Serverless_StorageApplication.EnvConfiguration;
+using AWS_Serverless_StorageApplication.Middleware;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using AWS_Serverless_StorageApplication.Repositories.Repositories;
-using AWS_Serverless_StorageApplication.Middleware;
 using MediatR;
 
 namespace AWS_Serverless_StorageApplication;

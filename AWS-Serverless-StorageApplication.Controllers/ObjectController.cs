@@ -1,11 +1,13 @@
-﻿using Amazon.Runtime.Internal.Transform;
-using Amazon.S3.Model;
+﻿using Amazon.S3.Model;
 using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Queries.ObjectQueries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Net;
+using System.Net.Mime;
 
 namespace AWS_Serverless_StorageApplication.Controllers
 {
@@ -30,11 +32,25 @@ namespace AWS_Serverless_StorageApplication.Controllers
         }
 
         [HttpGet("bucket/{bucketname}/object/{objectname}")]
-        public async Task<GetObjectResponse> GetObjectAsync(string bucketname, string objectname)
+        public async Task<IActionResult> GetObjectAsync(string bucketname, string objectname)
         {
             GetObjectResponse objectResponse = await _mediator.Send(new GetObjectQuery(bucketname, objectname));
 
-            return objectResponse;
+            try
+            {
+                Stream stream = objectResponse.ResponseStream;
+
+                return File(stream, MediaTypeNames.Application.Octet, objectResponse.Key);
+            }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
+
+                throw new Exception(JsonConvert.SerializeObject(error));
+            }
+
         }
 
         [HttpPut("bucket/{bucketname}/object")]
@@ -47,20 +63,32 @@ namespace AWS_Serverless_StorageApplication.Controllers
             {
                 ContentType = file.ContentType,
                 CreateDate = DateTime.Now,
-                Name = Guid.NewGuid().ToString(),
+                Name = String.Concat(Guid.NewGuid().ToString(), String.Format("{0}", Path.GetExtension(file.FileName))),
                 SizeInBytes = file.Length,
                 MetaData = metaData
             };
 
-            ObjectResponse? response = null;
-            using (MemoryStream ms = new MemoryStream())
+            try
             {
-                await file.CopyToAsync(ms);
+                ObjectResponse? response = null;
 
-                response = await _mediator.Send(new CreateObjectCommand(bucketname, objectDetails, ms));
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    await file.CopyToAsync(ms);
+
+                    response = await _mediator.Send(new CreateObjectCommand(bucketname, objectDetails, ms));
+
+                    return response;
+                }
             }
+            catch (Exception exception)
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = exception.Message;
+                error.ResponseCode = (int)HttpStatusCode.InternalServerError;
 
-            return response;
+                throw new Exception(JsonConvert.SerializeObject(error));
+            }
 
         }
 

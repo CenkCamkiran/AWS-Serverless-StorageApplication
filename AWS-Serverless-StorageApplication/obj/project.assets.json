@@ -1485,7 +1485,8 @@
           "AWS-Serverless-StorageApplication.Models": "1.0.0",
           "AWS-Serverless-StorageApplication.Queries": "1.0.0",
           "AWS-Serverless-StorageApplication.Repositories": "1.0.0",
-          "MediatR": "11.0.0"
+          "MediatR": "11.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
@@ -1536,7 +1537,8 @@
         "dependencies": {
           "AWS-Serverless-StorageApplication.Models": "1.0.0",
           "AWSSDK.S3": "3.7.102",
-          "MediatR": "11.0.0"
+          "MediatR": "11.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Queries.dll": {}
@@ -3260,7 +3262,8 @@
           "AWS-Serverless-StorageApplication.Models": "1.0.0",
           "AWS-Serverless-StorageApplication.Queries": "1.0.0",
           "AWS-Serverless-StorageApplication.Repositories": "1.0.0",
-          "MediatR": "11.0.0"
+          "MediatR": "11.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
@@ -3311,7 +3314,8 @@
         "dependencies": {
           "AWS-Serverless-StorageApplication.Models": "1.0.0",
           "AWSSDK.S3": "3.7.102",
-          "MediatR": "11.0.0"
+          "MediatR": "11.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
         "compile": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Queries.dll": {}

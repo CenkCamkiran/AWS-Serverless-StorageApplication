@@ -1,5 +1,4 @@
-﻿using AWS_Serverless_StorageApplication.Models;
-using MediatR;
+﻿using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Commands.ObjectCommands
 {
