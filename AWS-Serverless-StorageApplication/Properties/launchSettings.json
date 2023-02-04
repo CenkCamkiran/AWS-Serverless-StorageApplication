@@ -6,7 +6,8 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "AWS_ACCESS_KEY": "AKIAXIMIM2YU66EHBCXC",
-        "AWS_SECRET_KEY": "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"
+        "AWS_SECRET_KEY": "QEcqCuetJ3YDh8Us15zrD4xzl/ZLW+sAkWwtLFqG",
+        "FILE_LENGTH_LIMIT": "30000000"
       },
       "applicationUrl": "https://localhost:52398;http://localhost:52399"
     },
