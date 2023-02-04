@@ -1,6 +1,9 @@
 ﻿using AWS_Serverless_StorageApplication.Commands.ObjectCommands;
+using AWS_Serverless_StorageApplication.Helpers;
+using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using MediatR;
+using Newtonsoft.Json;
 using System.Net;
 
 namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
@@ -17,11 +20,20 @@ namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
 
         public async Task<int> Handle(DeleteObjectCommand request, CancellationToken cancellationToken)
         {
-            var response = await _s3ObjectStorageRepository.GetObject(request.BucketName, request.ObjectName);
-            if ((int)response.HttpStatusCode != (int)HttpStatusCode.OK)
-                return await Task.FromResult(0);
+            int response = await _s3ObjectStorageRepository.DeleteObjectAsync(request.BucketName, request.ObjectName);
 
-            return await _s3ObjectStorageRepository.DeleteObject(request.BucketName, request.ObjectName);
+            ObjectResponse objectResponse = new ObjectResponse();
+            if (response == (int)HttpStatusCode.NoContent)
+                return response;
+            else
+            {
+                StorageApplicationError error = new StorageApplicationError();
+                error.Message = "Error occurred during object deletion!";
+                error.ResponseCode = response;
+
+                throw new StorageApplicationException(JsonConvert.SerializeObject(error));
+            }
+
         }
     }
 }

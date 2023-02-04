@@ -17,7 +17,7 @@ namespace AWS_Serverless_StorageApplication.Handlers.ObjectHandlers
 
         public async Task<GetObjectResponse> Handle(GetObjectQuery request, CancellationToken cancellationToken)
         {
-            return await _s3ObjectStorageRepository.GetObject(request.BucketName, request.ObjectName);
+            return await _s3ObjectStorageRepository.GetObjectAsync(request.BucketName, request.ObjectName);
         }
     }
 }

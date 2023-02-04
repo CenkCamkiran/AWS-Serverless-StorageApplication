@@ -17,7 +17,7 @@ namespace AWS_Serverless_StorageApplication.Handlers.BucketHandlers
 
         public async Task<List<S3Bucket>> Handle(GetBucketListQuery request, CancellationToken cancellationToken)
         {
-            return await _s3ObjectStorageRepository.ListBuckets();
+            return await _s3ObjectStorageRepository.ListBucketsAsync();
         }
     }
 }

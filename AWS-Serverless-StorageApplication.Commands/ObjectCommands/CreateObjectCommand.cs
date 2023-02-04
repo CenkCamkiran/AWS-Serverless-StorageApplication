@@ -3,7 +3,7 @@ using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Commands.ObjectCommands
 {
-    public class CreateObjectCommand : IRequest<int>
+    public class CreateObjectCommand : IRequest<ObjectResponse>
     {
         public string BucketName { get; set; } = string.Empty;
         public ObjectDetails ObjectDetails { get; set; }

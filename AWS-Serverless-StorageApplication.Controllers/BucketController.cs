@@ -3,7 +3,6 @@ using AWS_Serverless_StorageApplication.Commands.BucketCommands;
 using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Queries.BucketQueries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AWS_Serverless_StorageApplication.Controllers
@@ -19,8 +18,8 @@ namespace AWS_Serverless_StorageApplication.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("bucketlist")]
-        public async Task<List<S3Bucket>> GetBucketList()
+        [HttpGet]
+        public async Task<List<S3Bucket>> GetBucketListAsync()
         {
             List<S3Bucket> bucketList = await _mediator.Send(new GetBucketListQuery());
 
@@ -30,29 +29,19 @@ namespace AWS_Serverless_StorageApplication.Controllers
         [HttpPut("{bucketname}")]
         //[ProducesResponseType(StatusCodes.Status200OK)]
         //Task<IActionResult>
-        public async Task<BucketResponse> CreateBucket(string bucketname)
+        public async Task<BucketResponse> CreateBucketAsync(string bucketname)
         {
-            int response = await _mediator.Send(new CreateBucketCommand(bucketname));
+            var response = await _mediator.Send(new CreateBucketCommand(bucketname));
 
-            BucketResponse bucketResponse = new BucketResponse();
-            bucketResponse.BucketName = bucketname;
-            bucketResponse.ResponseCode = response;
-            bucketResponse.ResponseDescription = "Bucket created successfully!";
-
-            return bucketResponse;
+            return response;
         }
 
         [HttpDelete("{bucketname}")]
-        public async Task<BucketResponse> DeleteBucket(string bucketname)
+        public async Task<BucketResponse> DeleteBucketAsync(string bucketname)
         {
-            int response = await _mediator.Send(new DeleteBucketCommand(bucketname));
+            var response = await _mediator.Send(new DeleteBucketCommand(bucketname));
 
-            BucketResponse bucketResponse = new BucketResponse();
-            bucketResponse.BucketName = bucketname;
-            bucketResponse.ResponseCode = response;
-            bucketResponse.ResponseDescription = "Bucket deleted successfully!";
-
-            return bucketResponse;
+            return response;
         }
     }
 }

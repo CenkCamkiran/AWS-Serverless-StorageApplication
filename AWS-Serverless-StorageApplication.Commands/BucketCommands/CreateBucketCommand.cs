@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using AWS_Serverless_StorageApplication.Models;
+using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Commands.BucketCommands
 {
-    public class CreateBucketCommand : IRequest<int>
+    public class CreateBucketCommand : IRequest<BucketResponse>
     {
         public string BucketName { get; set; } = string.Empty;
 

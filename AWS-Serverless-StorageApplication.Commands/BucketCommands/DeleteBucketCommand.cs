@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using AWS_Serverless_StorageApplication.Models;
+using MediatR;
 
 namespace AWS_Serverless_StorageApplication.Commands.BucketCommands
 {
-    public class DeleteBucketCommand : IRequest<int>
+    public class DeleteBucketCommand : IRequest<BucketResponse>
     {
         public string BucketName { get; set; } = string.Empty;
 

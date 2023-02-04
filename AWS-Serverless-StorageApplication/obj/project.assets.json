@@ -1477,6 +1477,23 @@
           "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
         }
       },
+      "AWS-Serverless-StorageApplication.Handlers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Commands": "1.0.0",
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "AWS-Serverless-StorageApplication.Queries": "1.0.0",
+          "AWS-Serverless-StorageApplication.Repositories": "1.0.0",
+          "MediatR": "11.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
+        }
+      },
       "AWS-Serverless-StorageApplication.Helpers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1485,6 +1502,22 @@
         },
         "runtime": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Helpers.dll": {}
+        }
+      },
+      "AWS-Serverless-StorageApplication.Middleware/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Helpers": "1.0.0",
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Middleware.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Middleware.dll": {}
         }
       },
       "AWS-Serverless-StorageApplication.Models/1.0.0": {
@@ -3219,6 +3252,23 @@
           "bin/placeholder/AWS-Serverless-StorageApplication.EnvConfiguration.dll": {}
         }
       },
+      "AWS-Serverless-StorageApplication.Handlers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Commands": "1.0.0",
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "AWS-Serverless-StorageApplication.Queries": "1.0.0",
+          "AWS-Serverless-StorageApplication.Repositories": "1.0.0",
+          "MediatR": "11.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Handlers.dll": {}
+        }
+      },
       "AWS-Serverless-StorageApplication.Helpers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3227,6 +3277,22 @@
         },
         "runtime": {
           "bin/placeholder/AWS-Serverless-StorageApplication.Helpers.dll": {}
+        }
+      },
+      "AWS-Serverless-StorageApplication.Middleware/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWS-Serverless-StorageApplication.Helpers": "1.0.0",
+          "AWS-Serverless-StorageApplication.Models": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Middleware.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AWS-Serverless-StorageApplication.Middleware.dll": {}
         }
       },
       "AWS-Serverless-StorageApplication.Models/1.0.0": {
@@ -6803,10 +6869,20 @@
       "path": "../AWS-Serverless-StorageApplication.EnvConfiguration/AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
       "msbuildProject": "../AWS-Serverless-StorageApplication.EnvConfiguration/AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
     },
+    "AWS-Serverless-StorageApplication.Handlers/1.0.0": {
+      "type": "project",
+      "path": "../AWS-Serverless-StorageApplication.Handlers/AWS-Serverless-StorageApplication.Handlers.csproj",
+      "msbuildProject": "../AWS-Serverless-StorageApplication.Handlers/AWS-Serverless-StorageApplication.Handlers.csproj"
+    },
     "AWS-Serverless-StorageApplication.Helpers/1.0.0": {
       "type": "project",
       "path": "../AWS-Serverless-StorageApplication.Helpers/AWS-Serverless-StorageApplication.Helpers.csproj",
       "msbuildProject": "../AWS-Serverless-StorageApplication.Helpers/AWS-Serverless-StorageApplication.Helpers.csproj"
+    },
+    "AWS-Serverless-StorageApplication.Middleware/1.0.0": {
+      "type": "project",
+      "path": "../AWS-Serverless-StorageApplication.Middleware/AWS-Serverless-StorageApplication.Middleware.csproj",
+      "msbuildProject": "../AWS-Serverless-StorageApplication.Middleware/AWS-Serverless-StorageApplication.Middleware.csproj"
     },
     "AWS-Serverless-StorageApplication.Models/1.0.0": {
       "type": "project",
@@ -6828,6 +6904,8 @@
     "net6.0": [
       "AWS-Serverless-StorageApplication.Controllers >= 1.0.0",
       "AWS-Serverless-StorageApplication.EnvConfiguration >= 1.0.0",
+      "AWS-Serverless-StorageApplication.Handlers >= 1.0.0",
+      "AWS-Serverless-StorageApplication.Middleware >= 1.0.0",
       "AWS-Serverless-StorageApplication.Repositories >= 1.0.0",
       "AWSSDK.S3 >= 3.7.102",
       "Amazon.Lambda.AspNetCoreServer >= 7.3.0",
@@ -6866,6 +6944,12 @@
             },
             "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
               "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
+            },
+            "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj": {
+              "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj"
+            },
+            "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
+              "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj"
             },
             "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
               "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"

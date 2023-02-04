@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageAppli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.EnvConfiguration", "AWS-Serverless-StorageApplication.EnvConfiguration\AWS-Serverless-StorageApplication.EnvConfiguration.csproj", "{0A9AB3C0-D886-4C48-A9C6-10987F5A1A8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS-Serverless-StorageApplication.Helpers", "AWS-Serverless-StorageApplication.Helpers\AWS-Serverless-StorageApplication.Helpers.csproj", "{EF44F5E4-9A17-48A9-A885-8E1FC23AD739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS-Serverless-StorageApplication.Helpers", "AWS-Serverless-StorageApplication.Helpers\AWS-Serverless-StorageApplication.Helpers.csproj", "{EF44F5E4-9A17-48A9-A885-8E1FC23AD739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
