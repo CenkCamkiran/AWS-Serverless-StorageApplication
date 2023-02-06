@@ -119,9 +119,107 @@ Deploy function to AWS Lambda
 
 ### S3 Storage API with .NET 6 Serverless
 
+- Lorem ipsum
+
 ### AWS API Gateway
 
+- Lorem ipsum
+
 ## Structure
+
+```bash
+|   .gitignore
+|   AWS-Serverless-StorageApplication.sln
+|   README.md
+|           
++---AWS-Serverless-StorageApplication
+|   |   appsettings.Development.json
+|   |   appsettings.json
+|   |   aws-lambda-tools-defaults.json
+|   |   AWS-Serverless-StorageApplication.csproj
+|   |   Dockerfile
+|   |   LambdaEntryPoint.cs
+|   |   LocalEntryPoint.cs
+|   |   serverless.template
+|   |   Startup.cs
+|   |                       
+|   \---Properties
+|           launchSettings.json
+|           
++---AWS-Serverless-StorageApplication.Commands
+|   |   AWS-Serverless-StorageApplication.Commands.csproj
+|   |               
+|   +---BucketCommands
+|   |       CreateBucketCommand.cs
+|   |       DeleteBucketCommand.cs
+|   |                   
+|   \---ObjectCommands
+|           CreateObjectCommand.cs
+|           DeleteObjectCommand.cs
+|       
++---AWS-Serverless-StorageApplication.Controllers
+|   |   AWS-Serverless-StorageApplication.Controllers.csproj
+|   |   BucketController.cs
+|   |   ObjectController.cs                
+|   |   
+|   \---Interfaces
+|           IS3ObjectStorageContext.cs
+|           
++---AWS-Serverless-StorageApplication.EnvConfiguration
+|   |   AWS-Serverless-StorageApplication.EnvConfiguration.csproj
+|   |   EnvVariablesConfiguration.cs
+|                       
++---AWS-Serverless-StorageApplication.Handlers
+|   |   AWS-Serverless-StorageApplication.Handlers.csproj
+|   |               
+|   +---BucketHandlers
+|   |       CreateBucketHandler.cs
+|   |       DeleteBucketHandler.cs
+|   |       GetBucketListHandler.cs
+|   |                   
+|   \---ObjectHandlers
+|           CreateObjectHandler.cs
+|           DeleteObjectHandler.cs
+|           GetObjectHandler.cs
+|           GetObjectListHandler.cs
+|           
++---AWS-Serverless-StorageApplication.Helpers
+|   |   AWS-Serverless-StorageApplication.Helpers.csproj
+|   |   StorageApplicationException.cs
+|                       
++---AWS-Serverless-StorageApplication.Middleware
+|   |   AWS-Serverless-StorageApplication.Middleware.csproj
+|   |   ErrorHandlerMiddleware.cs
+|   |   RequestValidationMiddleware.cs
+|                       
++---AWS-Serverless-StorageApplication.Models
+|   |   AWS-Serverless-StorageApplication.Models.csproj
+|   |   AWSCredentials.cs
+|   |   BaseResponse.cs
+|   |   BucketResponse.cs
+|   |   ObjectDetails.cs
+|   |   ObjectResponse.cs
+|   |   StorageApplicationError.cs   
+|
++---AWS-Serverless-StorageApplication.Queries
+|   |   AWS-Serverless-StorageApplication.Queries.csproj
+|   |               
+|   +---BucketQueries
+|   |       GetBucketListQuery.cs
+|   |                   
+|   \---ObjectQueries
+|           GetObjectListQuery.cs
+|           GetObjectQuery.cs
+|           
+\---AWS-Serverless-StorageApplication.Repositories
+    |   AWS-Serverless-StorageApplication.Repositories.csproj
+    |               
+    +---Interfaces
+    |       IS3ObjectStorageRepository.cs
+    |       
+    \---Repositories
+            S3ObjectStorageRepository.cs           
+```
 
 ## Contributing
 
@@ -134,5 +232,5 @@ Please use the Github issues.
 ## RoadMap
 
 - I am planning to improve myself on AWS Lambda Functions.
-- CQRS, DDD Archs will be implemented (<https://github.com/kgrzybek/sample-dotnet-core-cqrs-api>)
-- Event Sourcing <https://www.gencayyildiz.com/blog/asp-net-core-event-store-ile-event-sourcing-uygulamasiorneklendirme/>
+- Event Sourcing Design Pattern will be implemented <https://www.gencayyildiz.com/blog/asp-net-core-event-store-ile-event-sourcing-uygulamasiorneklendirme/>
+- I wanna learn API Gateway on AWS.
