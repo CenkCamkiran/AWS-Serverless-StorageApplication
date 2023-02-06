@@ -20,6 +20,10 @@ Build GUID generator via AWS Lambda Function.
   - [Structure](#structure)
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
+  - [Business Logic](#business-logic)
+    - [S3 Storage API with .NET 6 Serverless](#s3-storage-api-with-net-6-serverless)
+    - [AWS API Gateway](#aws-api-gateway)
+  - [Structure](#structure-1)
   - [Contributing](#contributing)
   - [Bug Reports \& Feature Requests](#bug-reports--feature-requests)
   - [RoadMap](#roadmap)
@@ -110,6 +114,14 @@ Deploy function to AWS Lambda
     cd "AWSLambdaGuidGenerator/src/AWSLambdaGuidGenerator"
     dotnet lambda deploy-function
 ```
+
+## Business Logic
+
+### S3 Storage API with .NET 6 Serverless
+
+### AWS API Gateway
+
+## Structure
 
 ## Contributing
 
