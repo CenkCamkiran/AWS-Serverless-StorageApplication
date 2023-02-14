@@ -20,7 +20,17 @@ Build File Storage API via AWS Lambda Function.
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
-    - [Storage Application API with .NET 6 Serverless](#storage-application-api-with-net-6-serverless)
+    - [Controllers](#controllers)
+      - [Bucket Controller](#bucket-controller)
+      - [Object Controller](#object-controller)
+    - [Environment Variables](#environment-variables)
+    - [Commands](#commands)
+    - [Handlers](#handlers)
+    - [Helpers](#helpers)
+    - [Middlewares](#middlewares)
+    - [Models](#models)
+    - [Queries](#queries)
+    - [Repositories](#repositories)
   - [Structure](#structure)
   - [Contributing](#contributing)
   - [Bug Reports \& Feature Requests](#bug-reports--feature-requests)
@@ -35,6 +45,9 @@ Build File Storage API via AWS Lambda Function.
 
 > **Note** <br />
 > AWS Developer Account <br />
+
+___
+<br />
 
 # AWS Lambda Storage Application API Project
 
@@ -91,11 +104,104 @@ Deploy function to AWS Lambda
     dotnet lambda deploy-function
 ```
 
+___
+
 ## Business Logic
 
-### Storage Application API with .NET 6 Serverless
+- I developed this project using CQRS Design Pattern. I implemented CQRS Design Pattern via MediatR Nuget Package. All project developed using .NET Core 6. I shared some details below about project layers.
+
+### Controllers
+
+#### Bucket Controller
+
+- It uses API Controller for S3 Bucket operations. It uses Dependency Injection to use IMediator interface.
+- It sends GetBucketListQuery object to Repository Layer via _mediator object and gets list of S3Bucket type of objects. And returns that list as JSON format.
+
+`GetBucketListAsync` [/api/main/bucket]
+
+**Parameters**
+No Body
+
+**Response**
+
+```
+{
+    "success": true
+}
+
+or any implemented error from https://buffer.com/developers/api/errors
+
+{
+    "code": 1000,
+    "error": "An error message"
+}
+```
+
+`CreateBucketAsync` [/api/main/bucket/{bucketname}]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `product` | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
+|        `plan` | required | string  | The plan for which to start the trial period. <br/><br/> Supported values for Publish: `pro`, `small`, `business`, `agency`.  <br/>Supported values for Analyze: `early-access-10`, `early-access-25`, `early-access-50`, `early-access-100`. |
+| `trialLength` | optional | integer | Length of the trial in days. <br/><br/>Default is `null`. <br/><br/>If value is null, relies on the product hook logic to define the trial length for the given plan and product.                    |
+|       `cycle` | optional | string  | Default is `null`. <br/><br/>If value is null, relies on the product hook logic to define the cycle. <br/><br/> Supported values: `null`, `month` or `year`          |
+|    `quantity` | optional | integer  | Default is `1`. <br/><br/>This value (either default or passed) will always override the current subscription quantity value.          |
+|    `cta` | optional | string  | Can be used for tracking purpose - [Read more](https://github.com/bufferapp/README/tree/master/runbooks/data-tracking)          |
+
+**Response**
+
+```
+{
+    "success": true
+}
+
+or any implemented error from https://buffer.com/developers/api/errors
+
+{
+    "code": 1000,
+    "error": "An error message"
+}
+```
+
+#### Object Controller
 
 - Lorem ipsum
+
+### Environment Variables
+
+- Lorem ipsum
+
+### Commands
+
+- Lorem ipsum
+
+### Handlers
+
+- Lorem ipsum
+
+### Helpers
+
+- Lorem ipsum
+
+### Middlewares
+
+- Lorem ipsum
+
+### Models
+
+- Lorem ipsum
+
+### Queries
+
+- Lorem ipsum
+
+### Repositories
+
+- Lorem ipsum
+
+___
 
 ## Structure
 
@@ -192,6 +298,8 @@ Deploy function to AWS Lambda
     \---Repositories
             S3ObjectStorageRepository.cs           
 ```
+
+___
 
 ## Contributing
 
