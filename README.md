@@ -2,11 +2,11 @@
 
 ## Abstract
 
-I was curious about AWS Technologies like **AWS Serverless**. So I developed simple **AWS Serverless via .NET Core 6**.
+I was curious about AWS Technologies like **AWS Serverless**. So I developed simple **AWS Storage Application API via .NET Core 6**.
 
 ## Philosophy
 
-Build File Storage API via AWS Lambda Function.
+Build File Storage API via AWS Serverless technology.
 
 ## Contents
 
@@ -16,13 +16,24 @@ Build File Storage API via AWS Lambda Function.
   - [Contents](#contents)
   - [Features](#features)
   - [Requirements](#requirements)
-- [AWS Lambda Storage Application API Project](#aws-lambda-storage-application-api-project)
+- [ASP.NET Core Web API Serverless Application](#aspnet-core-web-api-serverless-application)
+  - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
+  - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
+  - [Project Files](#project-files)
+  - [Packaging as a Docker image](#packaging-as-a-docker-image)
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
-    - [Controllers](#controllers)
-      - [Bucket Controller](#bucket-controller)
-      - [Object Controller](#object-controller)
+  - [Controllers (API endpoints)](#controllers-api-endpoints)
+    - [Bucket Controller](#bucket-controller)
+  - [`GET` \[/api/main/bucket\]](#get-apimainbucket)
+  - [`PUT` \[/api/main/bucket/{bucketname}\]](#put-apimainbucketbucketname)
+  - [`DELETE` \[/api/main/bucket/{bucketname}\]](#delete-apimainbucketbucketname)
+  - [Object Controller](#object-controller)
+  - [`GET` \[/bucket/{bucketname}/object\]](#get-bucketbucketnameobject)
+  - [`GET` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#get-apimainobjectbucketbucketnameobjectobjectname)
+  - [`PUT` \[/api/main/object/bucket/{bucketname}/object\]](#put-apimainobjectbucketbucketnameobject)
+  - [`DELETE` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#delete-apimainobjectbucketbucketnameobjectobjectname)
     - [Environment Variables](#environment-variables)
     - [Commands](#commands)
       - [Bucket Commands](#bucket-commands)
@@ -36,6 +47,8 @@ Build File Storage API via AWS Lambda Function.
       - [Request Validation Middleware](#request-validation-middleware)
     - [Models](#models)
     - [Queries](#queries)
+      - [Bucket Queries](#bucket-queries)
+      - [Object Queries](#object-queries)
     - [Repositories](#repositories)
   - [Structure](#structure)
   - [Contributing](#contributing)
@@ -45,7 +58,6 @@ Build File Storage API via AWS Lambda Function.
 ## Features
 
 - Developed via **.Net Core 6**
-- Deploy on AWS Lambda!
 
 ## Requirements
 
@@ -55,32 +67,92 @@ Build File Storage API via AWS Lambda Function.
 ___
 <br />
 
-# AWS Lambda Storage Application API Project
+# ASP.NET Core Web API Serverless Application
 
-This starter project consists of:
+This project shows how to run an ASP.NET Core Web API project as an AWS Lambda exposed through Amazon API Gateway. The NuGet package [Amazon.Lambda.AspNetCoreServer](https://www.nuget.org/packages/Amazon.Lambda.AspNetCoreServer) contains a Lambda function that is used to translate requests from API Gateway into the ASP.NET Core framework and then the responses from ASP.NET Core back to API Gateway.
 
-- Function.cs - class file containing a class with a single function handler method
+For more information about how the Amazon.Lambda.AspNetCoreServer package works and how to extend its behavior view its [README](https://github.com/aws/aws-lambda-dotnet/blob/master/Libraries/src/Amazon.Lambda.AspNetCoreServer/README.md) file in GitHub.
+
+### Configuring for API Gateway HTTP API ###
+
+API Gateway supports the original REST API and the new HTTP API. In addition HTTP API supports 2 different
+payload formats. When using the 2.0 format the base class of `LambdaEntryPoint` must be `Amazon.Lambda.AspNetCoreServer.APIGatewayHttpApiV2ProxyFunction`.
+For the 1.0 payload format the base class is the same as REST API which is `Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction`.
+**Note:** when using the `AWS::Serverless::Function` CloudFormation resource with an event type of `HttpApi` the default payload
+format is 2.0 so the base class of `LambdaEntryPoint` must be `Amazon.Lambda.AspNetCoreServer.APIGatewayHttpApiV2ProxyFunction`.
+
+### Configuring for Application Load Balancer ###
+
+To configure this project to handle requests from an Application Load Balancer instead of API Gateway change
+the base class of `LambdaEntryPoint` from `Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction` to
+`Amazon.Lambda.AspNetCoreServer.ApplicationLoadBalancerFunction`.
+
+### Project Files ###
+
+- serverless.template - an AWS CloudFormation Serverless Application Model template file for declaring your Serverless functions and other AWS resources
 - aws-lambda-tools-defaults.json - default argument settings for use with Visual Studio and command line deployment tools for AWS
+- LambdaEntryPoint.cs - class that derives from **Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction**. The code in
+this file bootstraps the ASP.NET Core hosting framework. The Lambda function is defined in the base class.
+Change the base class to **Amazon.Lambda.AspNetCoreServer.ApplicationLoadBalancerFunction** when using an
+Application Load Balancer.
+- LocalEntryPoint.cs - for local development this contains the executable Main function which bootstraps the ASP.NET Core hosting framework with Kestrel, as for typical ASP.NET Core applications.
+- Startup.cs - usual ASP.NET Core Startup class used to configure the services ASP.NET Core will use.
+- web.config - used for local development.
 
 You may also have a test project depending on the options selected.
 
-The generated function handler is a simple method accepting a string argument that returns the uppercase equivalent of the input string. Replace the body of this method, and parameters, to suit your needs.
+## Packaging as a Docker image
+
+!!!!! WILL BE EDITED IN THE FUTURE !!!!!
+
+This project is configured to package the Lambda function as a Docker image. The default configuration for the project and the Dockerfile is to build
+the .NET project on the host machine and then execute the `docker build` command which copies the .NET build artifacts from the host machine into
+the Docker image.
+
+The `--docker-host-build-output-dir` switch, which is set in the `aws-lambda-tools-defaults.json`, triggers the
+AWS .NET Lambda tooling to build the .NET project into the directory indicated by `--docker-host-build-output-dir`. The Dockerfile
+has a **COPY** command which copies the value from the directory pointed to by `--docker-host-build-output-dir` to the `/var/task` directory inside of the
+image.
+
+Alternatively the Docker file could be written to use [multi-stage](https://docs.docker.com/develop/develop-images/multistage-build/) builds and
+have the .NET project built inside the container. Below is an example of building the .NET project inside the image.
+
+```dockerfile
+FROM public.ecr.aws/lambda/dotnet:7 AS base
+
+FROM mcr.microsoft.com/dotnet/sdk:7.0-bullseye-slim as build
+WORKDIR /src
+COPY ["AWSServerless1.csproj", "AWSServerless1/"]
+RUN dotnet restore "AWSServerless1/AWSServerless1.csproj"
+
+WORKDIR "/src/AWSServerless1"
+COPY . .
+RUN dotnet build "AWSServerless1.csproj" --configuration Release --output /app/build
+
+FROM build AS publish
+RUN dotnet publish "AWSServerless1.csproj" \
+            --configuration Release \ 
+            --runtime linux-x64 \
+            --self-contained false \ 
+            --output /app/publish \
+            -p:PublishReadyToRun=true  
+
+FROM base AS final
+WORKDIR /var/task
+COPY --from=publish /app/publish .
+```
 
 ## Here are some steps to follow from Visual Studio
 
-To deploy your function to AWS Lambda, right click the project in Solution Explorer and select *Publish to AWS Lambda*.
+!!!!! WILL BE EDITED IN THE FUTURE !!!!!
 
-To view your deployed function open its Function View window by double-clicking the function name shown beneath the AWS Lambda node in the AWS Explorer tree.
+To deploy your Serverless application, right click the project in Solution Explorer and select *Publish to AWS Lambda*.
 
-To perform testing against your deployed function use the Test Invoke tab in the opened Function View window.
-
-To configure event sources for your deployed function, for example to have your function invoked when an object is created in an Amazon S3 bucket, use the Event Sources tab in the opened Function View window.
-
-To update the runtime configuration of your deployed function use the Configuration tab in the opened Function View window.
-
-To view execution logs of invocations of your function use the Logs tab in the opened Function View window.
+To view your deployed application open the Stack View window by double-clicking the stack name shown beneath the AWS CloudFormation node in the AWS Explorer tree. The Stack View also displays the root URL to your published application.
 
 ## Here are some steps to follow to get started from the command line
+
+!!!!! WILL BE EDITED IN THE FUTURE !!!!!
 
 Once you have edited your template and code you can deploy your application using the [Amazon.Lambda.Tools Global Tool](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) from the command line.
 
@@ -99,15 +171,15 @@ If already installed check if new version is available.
 Execute unit tests
 
 ```
-    cd "AWS-Serverless-StorageApplication/test/AWS-Serverless-StorageApplication.Tests"
+    cd "AWSServerless1/test/AWSServerless1.Tests"
     dotnet test
 ```
 
-Deploy function to AWS Lambda
+Deploy application
 
 ```
-    cd "AWS-Serverless-StorageApplication/src/AWS-Serverless-StorageApplication"
-    dotnet lambda deploy-function
+    cd "AWSServerless1/src/AWSServerless1"
+    dotnet lambda deploy-serverless
 ```
 
 ___
@@ -116,16 +188,18 @@ ___
 
 - I developed this project using CQRS Design Pattern. I implemented CQRS Design Pattern via MediatR Nuget Package. All project developed using .NET Core 6. I shared some details below about project layers.
 
-### Controllers
+## Controllers (API endpoints)
 
-#### Bucket Controller
+### Bucket Controller
 
 - It uses API Controller for S3 Bucket operations. It uses Dependency Injection to use IMediator interface.
 
-`GET` [/api/main/bucket]
+## `GET` [/api/main/bucket]
 
 **Parameters**
-No Body
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     **Body is not required.**
 
 **Response**
 
@@ -155,7 +229,7 @@ No Body
 
 ```
 
-`PUT` [/api/main/bucket/{bucketname}]
+## `PUT` [/api/main/bucket/{bucketname}]
 
 **Parameters**
 
@@ -180,7 +254,7 @@ No Body
 }
 ```
 
-`DELETE` [/api/main/bucket/{bucketname}]
+## `DELETE` [/api/main/bucket/{bucketname}]
 
 **Parameters**
 
@@ -200,11 +274,11 @@ No Body
 }
 ```
 
-#### Object Controller
+## Object Controller
 
 - It uses API Controller for S3 Object operations. It uses Dependency Injection to use IMediator interface.
 
-`GET` [/bucket/{bucketname}/object]
+## `GET` [/bucket/{bucketname}/object]
 
 **Parameters**
 
@@ -263,7 +337,7 @@ No Body
 ]
 ```
 
-`GET` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+## `GET` [/api/main/object/bucket/{bucketname}/object/{objectname}]
 
 **Parameters**
 
@@ -285,7 +359,7 @@ Response: Object as File
 }
 ```
 
-`PUT` [/api/main/object/bucket/{bucketname}/object]
+## `PUT` [/api/main/object/bucket/{bucketname}/object]
 
 **Parameters**
 
@@ -328,7 +402,7 @@ Value: File location in client to upload file as object into bucket
 > **Note** <br />
 > Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket. <br />
 
-`DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+## `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
 
 **Parameters**
 
@@ -363,13 +437,13 @@ Value: File location in client to upload file as object into bucket
 
 #### Bucket Commands
 
-Command: `CreateBucketCommand` => Base: `IRequest<BucketResponse>`
-Command: `DeleteBucketCommand` => Base: `IRequest<BucketResponse>`
+- Command: `CreateBucketCommand` => Base: `IRequest<BucketResponse>`
+- Command: `DeleteBucketCommand` => Base: `IRequest<BucketResponse>`
 
 #### Object Commands
 
-Command: `CreateObjectCommand` => Base: `IRequest<ObjectResponse>`
-Command: `DeleteObjectCommand` => Base: `IRequest<int>`
+- Command: `CreateObjectCommand` => Base: `IRequest<ObjectResponse>`
+- Command: `DeleteObjectCommand` => Base: `IRequest<int>`
 
 ### Handlers
 
@@ -379,18 +453,18 @@ Command: `DeleteObjectCommand` => Base: `IRequest<int>`
 
 - This handlers have three tasks. Create, Delete and GetBucketList in AWS S3.
 
-Handler: `CreateBucketHandler` => Base: `IRequestHandler<CreateBucketCommand, BucketResponse>`
-Handler: `DeleteBucketHandler` => Base: `IRequestHandler<DeleteBucketCommand, BucketResponse>`
-Handler: `GetBucketListHandler` => Base: `IRequestHandler<GetBucketListQuery, List<S3Bucket>>`
+- Handler: `CreateBucketHandler` => Base: `IRequestHandler<CreateBucketCommand, BucketResponse>`
+- Handler: `DeleteBucketHandler` => Base: `IRequestHandler<DeleteBucketCommand, BucketResponse>`
+- Handler: `GetBucketListHandler` => Base: `IRequestHandler<GetBucketListQuery, List<S3Bucket>>`
 
 #### Object Handlers
 
 - This handlers have three tasks. Create, Delete, GetObject and GetObjectList in AWS S3.
 
-Handler: `CreateObjectHandler` => Base: `IRequestHandler<CreateObjectCommand, ObjectResponse>`
-Handler: `DeleteObjectHandler` => Base: `IRequestHandler<DeleteObjectCommand, int>`
-Handler: `GetObjectHandler` => Base: `IRequestHandler<GetObjectQuery, GetObjectResponse>`
-Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, List<S3Object>>`
+- Handler: `CreateObjectHandler` => Base: `IRequestHandler<CreateObjectCommand, ObjectResponse>`
+- Handler: `DeleteObjectHandler` => Base: `IRequestHandler<DeleteObjectCommand, int>`
+- Handler: `GetObjectHandler` => Base: `IRequestHandler<GetObjectQuery, GetObjectResponse>`
+- Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, List<S3Object>>`
 
 ### Helpers
 
@@ -419,11 +493,20 @@ Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, Li
 
 ### Queries
 
-- Lorem ipsum
+- Queries written in this layer. Here are some details about Queries below.
+
+#### Bucket Queries
+
+Handler: `GetBucketListQuery` => Base: `IRequest<List<S3Bucket>>`
+
+#### Object Queries
+
+Handler: `GetObjectListQuery` => Base: `IRequest<List<S3Object>>`
+Handler: `GetObjectQuery` => Base: `IRequest<GetObjectResponse>`
 
 ### Repositories
 
-- Lorem ipsum
+- It handles S3 Object Storage methods in this layer. It has Repository class and interface.
 
 ___
 
