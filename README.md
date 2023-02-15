@@ -115,9 +115,8 @@ ___
 #### Bucket Controller
 
 - It uses API Controller for S3 Bucket operations. It uses Dependency Injection to use IMediator interface.
-- It sends GetBucketListQuery object to Repository Layer via _mediator object and gets list of S3Bucket type of objects. And returns that list as JSON format.
 
-`GetBucketListAsync` [/api/main/bucket]
+`GET` [/api/main/bucket]
 
 **Parameters**
 No Body
@@ -125,49 +124,181 @@ No Body
 **Response**
 
 ```
-{
-    "success": true
-}
+//It has no bucket
+[]
 
-or any implemented error from https://buffer.com/developers/api/errors
+//It has one bucket
+[
+    {
+        "creationDate": "2023-02-04T17:39:54+03:00",
+        "bucketName": "cenktests3"
+    }
+]
 
-{
-    "code": 1000,
-    "error": "An error message"
-}
+//It has two bucket
+[
+    {
+        "creationDate": "2023-02-04T17:39:54+03:00",
+        "bucketName": "cenktests3"
+    },
+    {
+        "creationDate": "2023-02-04T19:01:08+03:00",
+        "bucketName": "cf-templates-bjkbm48mjq7o-eu-central-1"
+    }
+]
+
 ```
 
-`CreateBucketAsync` [/api/main/bucket/{bucketname}]
+`PUT` [/api/main/bucket/{bucketname}]
 
 **Parameters**
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `product` | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
-|        `plan` | required | string  | The plan for which to start the trial period. <br/><br/> Supported values for Publish: `pro`, `small`, `business`, `agency`.  <br/>Supported values for Analyze: `early-access-10`, `early-access-25`, `early-access-50`, `early-access-100`. |
-| `trialLength` | optional | integer | Length of the trial in days. <br/><br/>Default is `null`. <br/><br/>If value is null, relies on the product hook logic to define the trial length for the given plan and product.                    |
-|       `cycle` | optional | string  | Default is `null`. <br/><br/>If value is null, relies on the product hook logic to define the cycle. <br/><br/> Supported values: `null`, `month` or `year`          |
-|    `quantity` | optional | integer  | Default is `1`. <br/><br/>This value (either default or passed) will always override the current subscription quantity value.          |
-|    `cta` | optional | string  | Can be used for tracking purpose - [Read more](https://github.com/bufferapp/README/tree/master/runbooks/data-tracking)          |
+|     `bucketname` | required | QueryParam String  | bucket name to create bucket <br/><br/>                                                                     |
 
 **Response**
 
 ```
+//Bucket creation successfull
 {
-    "success": true
+    "bucketName": "cengo123",
+    "responseCode": 200,
+    "responseDescription": "Bucket created successfully!"
 }
 
-or any implemented error from https://buffer.com/developers/api/errors
-
+//Bucket already created
 {
-    "code": 1000,
-    "error": "An error message"
+    "ResponseCode": 500,
+    "Message": "Your previous request to create the named bucket succeeded and you already own it."
+}
+```
+
+`DELETE` [/api/main/bucket/{bucketname}]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `bucketname` | required | QueryParam String  | bucket name to delete bucket <br/><br/>                                                                     |
+
+**Response**
+
+```
+//204 No Content
+
+//Bucket does not exist
+{
+    "ResponseCode": 500,
+    "Message": "The specified bucket does not exist"
 }
 ```
 
 #### Object Controller
 
-- Lorem ipsum
+- It uses API Controller for S3 Object operations. It uses Dependency Injection to use IMediator interface.
+
+`GET` [/bucket/{bucketname}/object]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `bucketname` | required | QueryParam String  | bucket name should be provided to get objects from defined bucket name <br/><br/>                                                                     |
+
+**Response**
+
+```
+//No objects in bucket
+[]
+
+//One object in bucket
+[
+    {
+        "checksumAlgorithm": [],
+        "eTag": "\"4b5a6ee97a163c2628a2a00dbd27a522\"",
+        "bucketName": "cengo123",
+        "key": "ProfilePicture.png",
+        "lastModified": "2023-02-15T22:56:05+03:00",
+        "owner": null,
+        "size": 16384,
+        "storageClass": {
+            "value": "STANDARD"
+        }
+    }
+]
+
+//Two or more objects in bucket
+[
+    {
+        "checksumAlgorithm": [],
+        "eTag": "\"4b5a6ee97a163c2628a2a00dbd27a522\"",
+        "bucketName": "cengo123",
+        "key": "ProfilePicture.png",
+        "lastModified": "2023-02-15T22:56:05+03:00",
+        "owner": null,
+        "size": 16384,
+        "storageClass": {
+            "value": "STANDARD"
+        }
+    },
+    {
+        "checksumAlgorithm": [],
+        "eTag": "\"6fd4c280a3f74db14edcb946e25ac395\"",
+        "bucketName": "cengo123",
+        "key": "Screenshot_1.png",
+        "lastModified": "2023-02-15T22:57:08+03:00",
+        "owner": null,
+        "size": 28274,
+        "storageClass": {
+            "value": "STANDARD"
+        }
+    }
+]
+```
+
+`GET` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `bucketname` | required | QueryParam String  | bucket name should be provided to get object from defined bucket name <br/><br/>                                                                     |
+|     `objectname` | required | QueryParam String  | object name to get object from bucket <br/><br/>                                                                     |
+
+**Response**
+
+```
+//Object will be downloaded into client
+Response: Object as File
+
+//Object or bucket does not exist in bucket
+{
+    "ResponseCode": 500,
+    "Message": "The specified key does not exist."
+}
+```
+
+`PUT` [/api/main/object/bucket/{bucketname}/object]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `bucketname` | required | QueryParam String  | bucket name to upload object into bucket <br/><br/>                                                                     |
+
+**Response**
+
+```
+//Object will be downloaded into client
+Response: Object as File
+
+//Object or bucket does not exist in bucket
+{
+    "ResponseCode": 500,
+    "Message": "The specified key does not exist."
+}
+```
 
 ### Environment Variables
 
