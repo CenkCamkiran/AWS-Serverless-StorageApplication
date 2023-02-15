@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj": {}
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Commands",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
             }
           }
@@ -64,30 +60,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Controllers",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,14 +107,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj"
               }
             }
           }
@@ -143,30 +149,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
         "projectName": "AWS-Serverless-StorageApplication.EnvConfiguration",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,8 +196,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
             }
           }
@@ -206,30 +222,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Handlers",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,17 +269,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Commands\\AWS-Serverless-StorageApplication.Commands.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
               }
             }
           }
@@ -288,30 +314,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Helpers",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -347,30 +383,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Middleware",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -384,11 +430,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
             }
           }
@@ -423,30 +469,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Models",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -482,30 +538,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Queries",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\AWS-Serverless-StorageApplication.Queries.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Queries\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -519,8 +585,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
             }
           }
@@ -559,30 +625,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj",
         "projectName": "AWS-Serverless-StorageApplication.Repositories",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -596,11 +672,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
             }
           }
@@ -635,30 +711,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj": {
+    "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
+        "projectUniqueName": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
         "projectName": "AWS-Serverless-StorageApplication",
-        "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
-        "packagesPath": "C:\\Users\\ccamkiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\obj\\",
+        "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
+        "packagesPath": "C:\\Users\\camki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ccamkiran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\camki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -672,20 +758,20 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Handlers\\AWS-Serverless-StorageApplication.Handlers.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj"
               },
-              "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
-                "projectPath": "C:\\Users\\ccamkiran\\Desktop\\Cenk Camkıran\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"
               }
             }
           }
@@ -726,20 +812,36 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.12, 6.0.12]"
             },
             {
               "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.12, 6.0.12]"
             }
           ],
           "frameworkReferences": {
@@ -750,7 +852,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

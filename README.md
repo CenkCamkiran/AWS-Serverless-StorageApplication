@@ -287,18 +287,65 @@ Response: Object as File
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `bucketname` | required | QueryParam String  | bucket name to upload object into bucket <br/><br/>                                                                     |
 
+`Content-Type`: `multipart/form-data`
+`Body`:
+
+```
+Key: file
+Value: File location in client to upload file as object into bucket
+```
+
 **Response**
 
 ```
-//Object will be downloaded into client
-Response: Object as File
+//Error occurs when file key does not exist in body
+{
+    "ResponseCode": 400,
+    "Message": "Request should contain file data!"
+}
 
-//Object or bucket does not exist in bucket
+//Error occurs when file size exceeds limit. Limit is 30000000 bytes (30 MB)
 {
     "ResponseCode": 500,
-    "Message": "The specified key does not exist."
+    "Message": "Request body too large. The max request body size is 30000000 bytes."
+}
+
+//Object uploaded successfully into bucket
+{
+    "objectName": "3759866e-698d-4472-85bf-07ce1ea60d69.txt",
+    "bucketName": "cenktests3",
+    "responseCode": 200,
+    "responseDescription": "Object created successfully!"
 }
 ```
+
+> **Note** <br />
+> Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket <br />
+
+`DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+
+**Parameters**
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `bucketname` | required | QueryParam String  | bucket name should be provided to delete object from defined bucket name <br/><br/>                                                                     |
+|     `objectname` | required | QueryParam String  | object name to delete object from bucket <br/><br/>                                                                      |
+
+**Response**
+
+```
+//Error occurs when object (file) key does not exist in bucket
+{
+    "ResponseCode": 500,
+    "Message": "The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint."
+}
+
+//Object (file) deleted successfully
+//Response: 204 No Content
+```
+
+> **Note** <br />
+> Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content <br />
 
 ### Environment Variables
 
