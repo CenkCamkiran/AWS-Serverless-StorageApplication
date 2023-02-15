@@ -25,9 +25,15 @@ Build File Storage API via AWS Lambda Function.
       - [Object Controller](#object-controller)
     - [Environment Variables](#environment-variables)
     - [Commands](#commands)
+      - [Bucket Commands](#bucket-commands)
+      - [Object Commands](#object-commands)
     - [Handlers](#handlers)
+      - [Bucket Handlers](#bucket-handlers)
+      - [Object Handlers](#object-handlers)
     - [Helpers](#helpers)
     - [Middlewares](#middlewares)
+      - [Error Handler Middleware](#error-handler-middleware)
+      - [Request Validation Middleware](#request-validation-middleware)
     - [Models](#models)
     - [Queries](#queries)
     - [Repositories](#repositories)
@@ -320,7 +326,7 @@ Value: File location in client to upload file as object into bucket
 ```
 
 > **Note** <br />
-> Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket <br />
+> Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket. <br />
 
 `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
 
@@ -345,31 +351,71 @@ Value: File location in client to upload file as object into bucket
 ```
 
 > **Note** <br />
-> Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content <br />
+> Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content. <br />
 
 ### Environment Variables
 
-- Lorem ipsum
+- AWS Access Key and AWS Secret Key must be provided as Environment Variables to use API properly. This layer gets Environment Variables and injects them into AWS S3 Connection.
 
 ### Commands
 
-- Lorem ipsum
+- Write-Delete Commands written in this layer. Here are some details about Commands below.
+
+#### Bucket Commands
+
+Command: `CreateBucketCommand` => Base: `IRequest<BucketResponse>`
+Command: `DeleteBucketCommand` => Base: `IRequest<BucketResponse>`
+
+#### Object Commands
+
+Command: `CreateObjectCommand` => Base: `IRequest<ObjectResponse>`
+Command: `DeleteObjectCommand` => Base: `IRequest<int>`
 
 ### Handlers
 
-- Lorem ipsum
+- Query and Command Handlers written in this layer. Here are some details about Handlers below.
+
+#### Bucket Handlers
+
+- This handlers have three tasks. Create, Delete and GetBucketList in AWS S3.
+
+Handler: `CreateBucketHandler` => Base: `IRequestHandler<CreateBucketCommand, BucketResponse>`
+Handler: `DeleteBucketHandler` => Base: `IRequestHandler<DeleteBucketCommand, BucketResponse>`
+Handler: `GetBucketListHandler` => Base: `IRequestHandler<GetBucketListQuery, List<S3Bucket>>`
+
+#### Object Handlers
+
+- This handlers have three tasks. Create, Delete, GetObject and GetObjectList in AWS S3.
+
+Handler: `CreateObjectHandler` => Base: `IRequestHandler<CreateObjectCommand, ObjectResponse>`
+Handler: `DeleteObjectHandler` => Base: `IRequestHandler<DeleteObjectCommand, int>`
+Handler: `GetObjectHandler` => Base: `IRequestHandler<GetObjectQuery, GetObjectResponse>`
+Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, List<S3Object>>`
 
 ### Helpers
 
-- Lorem ipsum
+- Exception classes written in this layer. **StorageApplicationException** exception class is used for throwing exception when errors occurred.
 
 ### Middlewares
 
-- Lorem ipsum
+- Middlewares written in this layer. Here are some details about Middlewares below.
+
+#### Error Handler Middleware
+
+- It is responsible for handling exceptions.
+- It catches exceptions and builds Response Body and Response Status code according to exception.
+
+#### Request Validation Middleware
+
+- It is responsible for checking fields on Form-Data field. It basically checks incoming to **CreateObjectAsync** action on **ObjectController**. It has four steps:
+  1. It checks Request Content Type. If Content Type does not have Form-Data it throws exception.
+  2. It checks any file injected in Form Data. If Form Data does not have file it throws exception.
+  3. It checks file size. If file size is zero or less bytes it throws exception.
+  4. It checks file size limit. If file size exceeds limit it throws exception.
 
 ### Models
 
-- Lorem ipsum
+- Response and Request models defined in this layer.
 
 ### Queries
 
