@@ -24,12 +24,10 @@ Build File Storage API via AWS Serverless technology.
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
-  - [Controllers (API endpoints)](#controllers-api-endpoints)
-    - [Bucket Controller](#bucket-controller)
+  - [Controllers (API Endpoints)](#controllers-api-endpoints)
   - [`GET` \[/api/main/bucket\]](#get-apimainbucket)
   - [`PUT` \[/api/main/bucket/{bucketname}\]](#put-apimainbucketbucketname)
   - [`DELETE` \[/api/main/bucket/{bucketname}\]](#delete-apimainbucketbucketname)
-  - [Object Controller](#object-controller)
   - [`GET` \[/bucket/{bucketname}/object\]](#get-bucketbucketnameobject)
   - [`GET` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#get-apimainobjectbucketbucketnameobjectobjectname)
   - [`PUT` \[/api/main/object/bucket/{bucketname}/object\]](#put-apimainobjectbucketbucketnameobject)
@@ -188,11 +186,7 @@ ___
 
 - I developed this project using CQRS Design Pattern. I implemented CQRS Design Pattern via MediatR Nuget Package. All project developed using .NET Core 6. I shared some details below about project layers.
 
-## Controllers (API endpoints)
-
-### Bucket Controller
-
-- It uses API Controller for S3 Bucket operations. It uses Dependency Injection to use IMediator interface.
+## Controllers (API Endpoints)
 
 ## `GET` [/api/main/bucket]
 
@@ -273,10 +267,6 @@ ___
     "Message": "The specified bucket does not exist"
 }
 ```
-
-## Object Controller
-
-- It uses API Controller for S3 Object operations. It uses Dependency Injection to use IMediator interface.
 
 ## `GET` [/bucket/{bucketname}/object]
 
