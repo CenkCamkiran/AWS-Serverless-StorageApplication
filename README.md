@@ -60,7 +60,7 @@ Build File Storage API via AWS Serverless technology.
 ## Requirements
 
 > **Note** <br />
-> AWS Developer Account <br />
+> :exclamation: :exclamation: :exclamation: AWS Developer Account :exclamation: :exclamation: :exclamation: <br />
 
 ___
 <br />
@@ -344,7 +344,7 @@ Value: File location in client to upload file as object into bucket
 }
 ```
 
-> **Note**  :exclamation: <br />
+> **Note** <br />
 > :exclamation: :exclamation: :exclamation:Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket.  :exclamation: :exclamation: :exclamation: <br />
 
 ## `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
@@ -370,7 +370,7 @@ Value: File location in client to upload file as object into bucket
 ```
 
 > **Note** <br />
-> Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content. <br />
+> :exclamation: :exclamation: :exclamation:Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content. :exclamation: :exclamation: :exclamation: <br />
 
 # Business Logic
 
