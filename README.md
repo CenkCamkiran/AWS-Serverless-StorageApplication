@@ -16,14 +16,14 @@ Build File Storage API via AWS Serverless technology.
   - [Contents](#contents)
   - [Features](#features)
   - [Requirements](#requirements)
-- [ASP.NET Core Web API Serverless Application](#aspnet-core-web-api-serverless-application)
+- [.NET Core Web API Serverless Application](#net-core-web-api-serverless-application)
     - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
     - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
     - [Project Files](#project-files)
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
-  - [Controllers (API Endpoints)](#controllers-api-endpoints)
+- [Controllers (API Endpoints)](#controllers-api-endpoints)
   - [`GET` \[/api/main/bucket\]](#get-apimainbucket)
   - [`PUT` \[/api/main/bucket/{bucketname}\]](#put-apimainbucketbucketname)
   - [`DELETE` \[/api/main/bucket/{bucketname}\]](#delete-apimainbucketbucketname)
@@ -31,26 +31,27 @@ Build File Storage API via AWS Serverless technology.
   - [`GET` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#get-apimainobjectbucketbucketnameobjectobjectname)
   - [`PUT` \[/api/main/object/bucket/{bucketname}/object\]](#put-apimainobjectbucketbucketnameobject)
   - [`DELETE` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#delete-apimainobjectbucketbucketnameobjectobjectname)
-    - [Environment Variables](#environment-variables)
-    - [Commands](#commands)
-      - [Bucket Commands](#bucket-commands)
-      - [Object Commands](#object-commands)
-    - [Handlers](#handlers)
-      - [Bucket Handlers](#bucket-handlers)
-      - [Object Handlers](#object-handlers)
-    - [Helpers](#helpers)
-    - [Middlewares](#middlewares)
-      - [Error Handler Middleware](#error-handler-middleware)
-      - [Request Validation Middleware](#request-validation-middleware)
-    - [Models](#models)
-    - [Queries](#queries)
-      - [Bucket Queries](#bucket-queries)
-      - [Object Queries](#object-queries)
-    - [Repositories](#repositories)
-  - [Structure](#structure)
-  - [Contributing](#contributing)
-  - [Bug Reports \& Feature Requests](#bug-reports--feature-requests)
-  - [RoadMap](#roadmap)
+- [Business Logic](#business-logic-1)
+  - [Environment Variables](#environment-variables)
+  - [Commands](#commands)
+    - [Bucket Commands](#bucket-commands)
+    - [Object Commands](#object-commands)
+  - [Handlers](#handlers)
+    - [Bucket Handlers](#bucket-handlers)
+    - [Object Handlers](#object-handlers)
+  - [Helpers](#helpers)
+  - [Middlewares](#middlewares)
+    - [Error Handler Middleware](#error-handler-middleware)
+    - [Request Validation Middleware](#request-validation-middleware)
+  - [Models](#models)
+  - [Queries](#queries)
+    - [Bucket Queries](#bucket-queries)
+    - [Object Queries](#object-queries)
+  - [Repositories](#repositories)
+- [Structure](#structure)
+- [Contributing](#contributing)
+- [Bug Reports \& Feature Requests](#bug-reports--feature-requests)
+- [RoadMap](#roadmap)
 
 ## Features
 
@@ -64,7 +65,7 @@ Build File Storage API via AWS Serverless technology.
 ___
 <br />
 
-# ASP.NET Core Web API Serverless Application
+# .NET Core Web API Serverless Application
 
 This project shows how to run an ASP.NET Core Web API project as an AWS Lambda exposed through Amazon API Gateway. The NuGet package [Amazon.Lambda.AspNetCoreServer](https://www.nuget.org/packages/Amazon.Lambda.AspNetCoreServer) contains a Lambda function that is used to translate requests from API Gateway into the ASP.NET Core framework and then the responses from ASP.NET Core back to API Gateway.
 
@@ -99,8 +100,6 @@ Application Load Balancer.
 You may also have a test project depending on the options selected.
 
 ## Here are some steps to follow from Visual Studio
-
-!!!!! WILL BE EDITED IN THE FUTURE !!!!!
 
 To deploy your Serverless application, right click the project in Solution Explorer and select *Publish to AWS Lambda*.
 
@@ -142,7 +141,7 @@ ___
 
 - I developed this project using CQRS Design Pattern. I implemented CQRS Design Pattern via MediatR Nuget Package. All project developed using .NET Core 6. I shared some details below about project layers.
 
-## Controllers (API Endpoints)
+# Controllers (API Endpoints)
 
 ## `GET` [/api/main/bucket]
 
@@ -185,7 +184,7 @@ ___
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name to create bucket <br/><br/>                                                                     |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name to create bucket <br/><br/>                                                                     |
 
 **Response**
 
@@ -210,7 +209,7 @@ ___
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name to delete bucket <br/><br/>                                                                     |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name to delete bucket <br/><br/>                                                                     |
 
 **Response**
 
@@ -230,7 +229,7 @@ ___
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name should be provided to get objects from defined bucket name <br/><br/>                                                                     |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name should be provided to get objects from defined bucket name <br/><br/>                                                                     |
 
 **Response**
 
@@ -289,8 +288,8 @@ ___
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name should be provided to get object from defined bucket name <br/><br/>                                                                     |
-|     `objectname` | required | QueryParam String  | object name to get object from bucket <br/><br/>                                                                     |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name should be provided to get object from defined bucket name <br/><br/>                                                                     |
+|     `objectname` | required | QueryParam String  | <br/> object name to get object from bucket <br/><br/>                                                                     |
 
 **Response**
 
@@ -311,7 +310,7 @@ Response: Object as File
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name to upload object into bucket <br/><br/>                                                                     |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name to upload object into bucket <br/><br/>                                                                     |
 
 `Content-Type`: `multipart/form-data`
 `Body`:
@@ -345,6 +344,9 @@ Value: File location in client to upload file as object into bucket
 }
 ```
 
+:baby:
+
+<img height="30px" width="30px" src="https://github.githubassets.com/images/icons/emoji/unicode/2757.png?v8" alt="exclamation">
 > **Note** <br />
 > Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket. <br />
 
@@ -354,8 +356,8 @@ Value: File location in client to upload file as object into bucket
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `bucketname` | required | QueryParam String  | bucket name should be provided to delete object from defined bucket name <br/><br/>                                                                     |
-|     `objectname` | required | QueryParam String  | object name to delete object from bucket <br/><br/>                                                                      |
+|     `bucketname` | required | QueryParam String  | <br/> bucket name should be provided to delete object from defined bucket name <br/><br/>                                                                     |
+|     `objectname` | required | QueryParam String  | <br/> object name to delete object from bucket <br/><br/>                                                                      |
 
 **Response**
 
@@ -373,29 +375,37 @@ Value: File location in client to upload file as object into bucket
 > **Note** <br />
 > Object will be deleted even the provided object name does not exist in bucket. In this situation response will be 204 No Content. <br />
 
-### Environment Variables
+# Business Logic
+
+## Environment Variables
 
 - AWS Access Key and AWS Secret Key must be provided as Environment Variables to use API properly. This layer gets Environment Variables and injects them into AWS S3 Connection.
 
-### Commands
+___
+<br />
+
+## Commands
 
 - Write-Delete Commands written in this layer. Here are some details about Commands below.
 
-#### Bucket Commands
+### Bucket Commands
 
 - Command: `CreateBucketCommand` => Base: `IRequest<BucketResponse>`
 - Command: `DeleteBucketCommand` => Base: `IRequest<BucketResponse>`
 
-#### Object Commands
+### Object Commands
 
 - Command: `CreateObjectCommand` => Base: `IRequest<ObjectResponse>`
 - Command: `DeleteObjectCommand` => Base: `IRequest<int>`
 
-### Handlers
+___
+<br />
+
+## Handlers
 
 - Query and Command Handlers written in this layer. Here are some details about Handlers below.
 
-#### Bucket Handlers
+### Bucket Handlers
 
 - This handlers have three tasks. Create, Delete and GetBucketList in AWS S3.
 
@@ -403,7 +413,7 @@ Value: File location in client to upload file as object into bucket
 - Handler: `DeleteBucketHandler` => Base: `IRequestHandler<DeleteBucketCommand, BucketResponse>`
 - Handler: `GetBucketListHandler` => Base: `IRequestHandler<GetBucketListQuery, List<S3Bucket>>`
 
-#### Object Handlers
+### Object Handlers
 
 - This handlers have three tasks. Create, Delete, GetObject and GetObjectList in AWS S3.
 
@@ -412,20 +422,23 @@ Value: File location in client to upload file as object into bucket
 - Handler: `GetObjectHandler` => Base: `IRequestHandler<GetObjectQuery, GetObjectResponse>`
 - Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, List<S3Object>>`
 
-### Helpers
+___
+<br />
+
+## Helpers
 
 - Exception classes written in this layer. **StorageApplicationException** exception class is used for throwing exception when errors occurred.
 
-### Middlewares
+## Middlewares
 
 - Middlewares written in this layer. Here are some details about Middlewares below.
 
-#### Error Handler Middleware
+### Error Handler Middleware
 
 - It is responsible for handling exceptions.
 - It catches exceptions and builds Response Body and Response Status code according to exception.
 
-#### Request Validation Middleware
+### Request Validation Middleware
 
 - It is responsible for checking fields on Form-Data field. It basically checks incoming to **CreateObjectAsync** action on **ObjectController**. It has four steps:
   1. It checks Request Content Type. If Content Type does not have Form-Data it throws exception.
@@ -433,30 +446,37 @@ Value: File location in client to upload file as object into bucket
   3. It checks file size. If file size is zero or less bytes it throws exception.
   4. It checks file size limit. If file size exceeds limit it throws exception.
 
-### Models
+___
+<br />
+
+## Models
 
 - Response and Request models defined in this layer.
 
-### Queries
+___
+<br />
+
+## Queries
 
 - Queries written in this layer. Here are some details about Queries below.
 
-#### Bucket Queries
+### Bucket Queries
 
 Handler: `GetBucketListQuery` => Base: `IRequest<List<S3Bucket>>`
 
-#### Object Queries
+### Object Queries
 
 Handler: `GetObjectListQuery` => Base: `IRequest<List<S3Object>>`
 Handler: `GetObjectQuery` => Base: `IRequest<GetObjectResponse>`
 
-### Repositories
+___
+<br />
+
+## Repositories
 
 - It handles S3 Object Storage methods in this layer. It has Repository class and interface.
 
-___
-
-## Structure
+# Structure
 
 ```bash
 |   .gitignore
@@ -554,14 +574,14 @@ ___
 
 ___
 
-## Contributing
+# Contributing
 
 I am open every advice for my project. I am planning to improve myself on **.NET Core 6, AWS Lambda Functions**. So don't hesitate comment on my project. Every idea is plus for me.
 
-## Bug Reports & Feature Requests
+# Bug Reports & Feature Requests
 
 Please use the Github issues.
 
-## RoadMap
+# RoadMap
 
 - I am planning to improve myself on AWS Lambda Functions.
