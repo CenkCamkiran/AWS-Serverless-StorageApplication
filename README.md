@@ -344,10 +344,7 @@ Value: File location in client to upload file as object into bucket
 }
 ```
 
-:baby:
-
-<img height="30px" width="30px" src="https://github.githubassets.com/images/icons/emoji/unicode/2757.png?v8" alt="exclamation">
-> **Note** <br />
+> :exclamation: **Note** <br />
 > Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket. <br />
 
 ## `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
