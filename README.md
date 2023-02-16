@@ -379,7 +379,6 @@ Value: File location in client to upload file as object into bucket
 - AWS Access Key and AWS Secret Key must be provided as Environment Variables to use API properly. This layer gets Environment Variables and injects them into AWS S3 Connection.
 
 ___
-<br />
 
 ## Commands
 
@@ -396,7 +395,6 @@ ___
 - Command: `DeleteObjectCommand` => Base: `IRequest<int>`
 
 ___
-<br />
 
 ## Handlers
 
@@ -420,7 +418,6 @@ ___
 - Handler: `GetObjectListHandler` => Base: `IRequestHandler<GetObjectListQuery, List<S3Object>>`
 
 ___
-<br />
 
 ## Helpers
 
@@ -444,14 +441,12 @@ ___
   4. It checks file size limit. If file size exceeds limit it throws exception.
 
 ___
-<br />
 
 ## Models
 
 - Response and Request models defined in this layer.
 
 ___
-<br />
 
 ## Queries
 
@@ -467,7 +462,6 @@ Handler: `GetObjectListQuery` => Base: `IRequest<List<S3Object>>`
 Handler: `GetObjectQuery` => Base: `IRequest<GetObjectResponse>`
 
 ___
-<br />
 
 ## Repositories
 
