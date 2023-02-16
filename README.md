@@ -382,7 +382,7 @@ ___
 
 ## Commands
 
-- Write-Delete Commands written in this layer. Here are some details about Commands below.
+Write-Delete Commands written in this layer. Here are some details about Commands below.
 
 ### Bucket Commands
 
@@ -398,7 +398,7 @@ ___
 
 ## Handlers
 
-- Query and Command Handlers written in this layer. Here are some details about Handlers below.
+Query and Command Handlers written in this layer. Here are some details about Handlers below.
 
 ### Bucket Handlers
 
@@ -421,11 +421,11 @@ ___
 
 ## Helpers
 
-- Exception classes written in this layer. **StorageApplicationException** exception class is used for throwing exception when errors occurred.
+Exception classes written in this layer. **StorageApplicationException** exception class is used for throwing exception when errors occurred.
 
 ## Middlewares
 
-- Middlewares written in this layer. Here are some details about Middlewares below.
+Middlewares written in this layer. Here are some details about Middlewares below.
 
 ### Error Handler Middleware
 
@@ -444,28 +444,28 @@ ___
 
 ## Models
 
-- Response and Request models defined in this layer.
+Response and Request models defined in this layer.
 
 ___
 
 ## Queries
 
-- Queries written in this layer. Here are some details about Queries below.
+Queries written in this layer. Here are some details about Queries below.
 
 ### Bucket Queries
 
-Handler: `GetBucketListQuery` => Base: `IRequest<List<S3Bucket>>`
+- Handler: `GetBucketListQuery` => Base: `IRequest<List<S3Bucket>>`
 
 ### Object Queries
 
-Handler: `GetObjectListQuery` => Base: `IRequest<List<S3Object>>`
-Handler: `GetObjectQuery` => Base: `IRequest<GetObjectResponse>`
+- Handler: `GetObjectListQuery` => Base: `IRequest<List<S3Object>>`
+- Handler: `GetObjectQuery` => Base: `IRequest<GetObjectResponse>`
 
 ___
 
 ## Repositories
 
-- It handles S3 Object Storage methods in this layer. It has Repository class and interface.
+It handles S3 Object Storage methods in this layer. It has Repository class and interface.
 
 # Structure
 
