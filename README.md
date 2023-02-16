@@ -60,7 +60,7 @@ Build File Storage API via AWS Serverless technology.
 ## Requirements
 
 > **Note** <br />
-> :exclamation: :exclamation: :exclamation: AWS Developer Account :exclamation: :exclamation: :exclamation: <br />
+> AWS Developer Account <br />
 
 ___
 <br />
