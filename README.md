@@ -17,10 +17,9 @@ Build File Storage API via AWS Serverless technology.
   - [Features](#features)
   - [Requirements](#requirements)
 - [ASP.NET Core Web API Serverless Application](#aspnet-core-web-api-serverless-application)
-  - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
-  - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
-  - [Project Files](#project-files)
-  - [Packaging as a Docker image](#packaging-as-a-docker-image)
+    - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
+    - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
+    - [Project Files](#project-files)
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
@@ -99,47 +98,6 @@ Application Load Balancer.
 
 You may also have a test project depending on the options selected.
 
-## Packaging as a Docker image
-
-!!!!! WILL BE EDITED IN THE FUTURE !!!!!
-
-This project is configured to package the Lambda function as a Docker image. The default configuration for the project and the Dockerfile is to build
-the .NET project on the host machine and then execute the `docker build` command which copies the .NET build artifacts from the host machine into
-the Docker image.
-
-The `--docker-host-build-output-dir` switch, which is set in the `aws-lambda-tools-defaults.json`, triggers the
-AWS .NET Lambda tooling to build the .NET project into the directory indicated by `--docker-host-build-output-dir`. The Dockerfile
-has a **COPY** command which copies the value from the directory pointed to by `--docker-host-build-output-dir` to the `/var/task` directory inside of the
-image.
-
-Alternatively the Docker file could be written to use [multi-stage](https://docs.docker.com/develop/develop-images/multistage-build/) builds and
-have the .NET project built inside the container. Below is an example of building the .NET project inside the image.
-
-```dockerfile
-FROM public.ecr.aws/lambda/dotnet:7 AS base
-
-FROM mcr.microsoft.com/dotnet/sdk:7.0-bullseye-slim as build
-WORKDIR /src
-COPY ["AWSServerless1.csproj", "AWSServerless1/"]
-RUN dotnet restore "AWSServerless1/AWSServerless1.csproj"
-
-WORKDIR "/src/AWSServerless1"
-COPY . .
-RUN dotnet build "AWSServerless1.csproj" --configuration Release --output /app/build
-
-FROM build AS publish
-RUN dotnet publish "AWSServerless1.csproj" \
-            --configuration Release \ 
-            --runtime linux-x64 \
-            --self-contained false \ 
-            --output /app/publish \
-            -p:PublishReadyToRun=true  
-
-FROM base AS final
-WORKDIR /var/task
-COPY --from=publish /app/publish .
-```
-
 ## Here are some steps to follow from Visual Studio
 
 !!!!! WILL BE EDITED IN THE FUTURE !!!!!
@@ -149,8 +107,6 @@ To deploy your Serverless application, right click the project in Solution Explo
 To view your deployed application open the Stack View window by double-clicking the stack name shown beneath the AWS CloudFormation node in the AWS Explorer tree. The Stack View also displays the root URL to your published application.
 
 ## Here are some steps to follow to get started from the command line
-
-!!!!! WILL BE EDITED IN THE FUTURE !!!!!
 
 Once you have edited your template and code you can deploy your application using the [Amazon.Lambda.Tools Global Tool](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) from the command line.
 
@@ -169,15 +125,15 @@ If already installed check if new version is available.
 Execute unit tests
 
 ```
-    cd "AWSServerless1/test/AWSServerless1.Tests"
+    cd "AWS-Serverless-StorageApplication/test/AWS-Serverless-StorageApplication.Tests"
     dotnet test
 ```
 
 Deploy application
 
 ```
-    cd "AWSServerless1/src/AWSServerless1"
-    dotnet lambda deploy-serverless
+    cd "AWS-Serverless-StorageApplication/src/AWS-Serverless-StorageApplication"
+    dotnet lambda deploy-serverless # or what you want a name
 ```
 
 ___
