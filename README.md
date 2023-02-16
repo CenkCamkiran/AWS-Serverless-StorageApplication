@@ -24,13 +24,13 @@ Build File Storage API via AWS Serverless technology.
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
 - [Controllers (API Endpoints)](#controllers-api-endpoints)
-  - [`GET` \[/api/main/bucket\]](#get-apimainbucket)
-  - [`PUT` \[/api/main/bucket/{bucketname}\]](#put-apimainbucketbucketname)
-  - [`DELETE` \[/api/main/bucket/{bucketname}\]](#delete-apimainbucketbucketname)
-  - [`GET` \[/bucket/{bucketname}/object\]](#get-bucketbucketnameobject)
-  - [`GET` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#get-apimainobjectbucketbucketnameobjectobjectname)
-  - [`PUT` \[/api/main/object/bucket/{bucketname}/object\]](#put-apimainobjectbucketbucketnameobject)
-  - [`DELETE` \[/api/main/object/bucket/{bucketname}/object/{objectname}\]](#delete-apimainobjectbucketbucketnameobjectobjectname)
+  - [`GET` /api/main/bucket](#get-apimainbucket)
+  - [`PUT` /api/main/bucket/{bucketname}](#put-apimainbucketbucketname)
+  - [`DELETE` /api/main/bucket/{bucketname}](#delete-apimainbucketbucketname)
+  - [`GET` /bucket/{bucketname}/object](#get-bucketbucketnameobject)
+  - [`GET` /api/main/object/bucket/{bucketname}/object/{objectname}](#get-apimainobjectbucketbucketnameobjectobjectname)
+  - [`PUT` /api/main/object/bucket/{bucketname}/object](#put-apimainobjectbucketbucketnameobject)
+  - [`DELETE` /api/main/object/bucket/{bucketname}/object/{objectname}](#delete-apimainobjectbucketbucketnameobjectobjectname)
 - [Business Logic](#business-logic-1)
   - [Environment Variables](#environment-variables)
   - [Commands](#commands)
@@ -142,12 +142,13 @@ ___
 
 # Controllers (API Endpoints)
 
-## `GET` [/api/main/bucket]
+## `GET` /api/main/bucket
 
 **Parameters**
+
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     **Body is not required.**
+|     n/a | n/a | n/a | <br/> n/a <br/><br/>                                                                     |
 
 **Response**
 
@@ -177,7 +178,7 @@ ___
 
 ```
 
-## `PUT` [/api/main/bucket/{bucketname}]
+## `PUT` /api/main/bucket/{bucketname}
 
 **Parameters**
 
@@ -202,7 +203,7 @@ ___
 }
 ```
 
-## `DELETE` [/api/main/bucket/{bucketname}]
+## `DELETE` /api/main/bucket/{bucketname}
 
 **Parameters**
 
@@ -222,7 +223,7 @@ ___
 }
 ```
 
-## `GET` [/bucket/{bucketname}/object]
+## `GET` /bucket/{bucketname}/object
 
 **Parameters**
 
@@ -281,7 +282,7 @@ ___
 ]
 ```
 
-## `GET` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+## `GET` /api/main/object/bucket/{bucketname}/object/{objectname}
 
 **Parameters**
 
@@ -303,7 +304,7 @@ Response: Object as File
 }
 ```
 
-## `PUT` [/api/main/object/bucket/{bucketname}/object]
+## `PUT` /api/main/object/bucket/{bucketname}/object
 
 **Parameters**
 
@@ -346,7 +347,7 @@ Value: File location in client to upload file as object into bucket
 > **Note** <br />
 > :exclamation: :exclamation: :exclamation:Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket.  :exclamation: :exclamation: :exclamation: <br />
 
-## `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
+## `DELETE` /api/main/object/bucket/{bucketname}/object/{objectname}
 
 **Parameters**
 
