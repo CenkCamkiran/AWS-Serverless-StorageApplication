@@ -63,7 +63,6 @@ Build File Storage API via AWS Serverless technology.
 > AWS Developer Account <br />
 
 ___
-<br />
 
 # .NET Core Web API Serverless Application
 
