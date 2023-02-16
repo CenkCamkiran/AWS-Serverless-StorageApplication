@@ -344,8 +344,8 @@ Value: File location in client to upload file as object into bucket
 }
 ```
 
-> :exclamation: **Note** <br />
-> Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket. <br />
+> **Note**  :exclamation: <br />
+> :exclamation: :exclamation: :exclamation:Object will be uploaded even the provided bucket does not exist in AWS S3. In this situation if bucket does not exist bucket will be created and after that object will be created in that bucket.  :exclamation: :exclamation: :exclamation: <br />
 
 ## `DELETE` [/api/main/object/bucket/{bucketname}/object/{objectname}]
 
