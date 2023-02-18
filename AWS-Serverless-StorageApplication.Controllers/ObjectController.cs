@@ -40,7 +40,7 @@ namespace AWS_Serverless_StorageApplication.Controllers
             {
                 Stream stream = objectResponse.ResponseStream;
 
-                return File(stream, objectResponse.Key);
+                return File(stream, Path.GetExtension(objectname), objectResponse.Key);
             }
             catch (Exception exception)
             {
