@@ -6910,6 +6910,7 @@
       "AWS-Serverless-StorageApplication.EnvConfiguration >= 1.0.0",
       "AWS-Serverless-StorageApplication.Handlers >= 1.0.0",
       "AWS-Serverless-StorageApplication.Middleware >= 1.0.0",
+      "AWS-Serverless-StorageApplication.Models >= 1.0.0",
       "AWS-Serverless-StorageApplication.Repositories >= 1.0.0",
       "AWSSDK.S3 >= 3.7.102",
       "Amazon.Lambda.AspNetCoreServer >= 7.3.0",
@@ -6954,6 +6955,9 @@
             },
             "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj": {
               "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Middleware\\AWS-Serverless-StorageApplication.Middleware.csproj"
+            },
+            "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
+              "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
             },
             "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
               "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj"

@@ -2,10 +2,10 @@ using Amazon;
 using Amazon.S3;
 using AWS_Serverless_StorageApplication.EnvConfiguration;
 using AWS_Serverless_StorageApplication.Middleware;
-using AWS_Serverless_StorageApplication.Models;
 using AWS_Serverless_StorageApplication.Repositories.Interfaces;
 using AWS_Serverless_StorageApplication.Repositories.Repositories;
 using MediatR;
+using AWSCredentials = AWS_Serverless_StorageApplication.Models.AWSCredentials;
 
 namespace AWS_Serverless_StorageApplication;
 
@@ -51,6 +51,9 @@ public class Startup
 
         EnvVariablesConfiguration envVariables = new EnvVariablesConfiguration();
         AWSCredentials awsCredentials = envVariables.AWSCredentials();
+        Console.WriteLine("AWS Access Key: " + awsCredentials.AccessKey);
+        Console.WriteLine("AWS Secret Key: " + awsCredentials.SecretKey);
+        Console.WriteLine("FILE_LENGTH_LIMIT: " + Environment.GetEnvironmentVariable("FILE_LENGTH_LIMIT"));
 
         IAmazonS3 client = new AmazonS3Client(awsCredentials.AccessKey, awsCredentials.SecretKey, RegionEndpoint.EUCentral1);
         services.AddSingleton<IAmazonS3>(client);
