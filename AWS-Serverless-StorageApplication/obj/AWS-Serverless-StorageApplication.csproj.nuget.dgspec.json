@@ -81,6 +81,11 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Controllers\\AWS-Serverless-StorageApplication.Controllers.csproj": {
@@ -170,6 +175,11 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
@@ -255,6 +265,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
@@ -348,6 +363,11 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
@@ -416,6 +436,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
@@ -506,6 +531,11 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
@@ -574,6 +604,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
@@ -662,6 +697,11 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Repositories\\AWS-Serverless-StorageApplication.Repositories.csproj": {
@@ -747,6 +787,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
@@ -835,7 +880,7 @@
               "version": "[6.0.12, 6.0.12]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
               "version": "[6.0.12, 6.0.12]"
             },
             {
@@ -843,7 +888,7 @@
               "version": "[6.0.12, 6.0.12]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
               "version": "[6.0.12, 6.0.12]"
             },
             {
@@ -851,15 +896,11 @@
               "version": "[6.0.12, 6.0.12]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
               "version": "[6.0.12, 6.0.12]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.12, 6.0.12]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[6.0.12, 6.0.12]"
             }
           ],
@@ -875,7 +916,7 @@
         }
       },
       "runtimes": {
-        "win-x64": {
+        "linux-x64": {
           "#import": []
         }
       }

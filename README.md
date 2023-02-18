@@ -17,9 +17,9 @@ Build File Storage API via AWS Serverless technology.
   - [Features](#features)
   - [Requirements](#requirements)
 - [.NET Core Web API Serverless Application](#net-core-web-api-serverless-application)
-    - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
-    - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
-    - [Project Files](#project-files)
+  - [Configuring for API Gateway HTTP API](#configuring-for-api-gateway-http-api)
+  - [Configuring for Application Load Balancer](#configuring-for-application-load-balancer)
+  - [Project Files](#project-files)
   - [Here are some steps to follow from Visual Studio](#here-are-some-steps-to-follow-from-visual-studio)
   - [Here are some steps to follow to get started from the command line](#here-are-some-steps-to-follow-to-get-started-from-the-command-line)
   - [Business Logic](#business-logic)
@@ -376,8 +376,17 @@ Value: File location in client to upload file as object into bucket
 
 ## Environment Variables
 
-- AWS Access Key and AWS Secret Key must be provided as Environment Variables to use API properly. This layer gets Environment Variables and injects them into AWS S3 Connection.
+- **AWS Access Key**, **AWS Secret Key** and **File Size Limit** must be created in **AWS Secrets Manager**. Also during testing this project, you should install AWS CLI on your machine. After that you should configure your aws profile using below command:
 
+```bash
+aws configure
+```
+
+> **Note** <br />
+> :exclamation: :exclamation: :exclamation: If you do not this configuration in your machine, the project will throw exception due to missing aws credentials on your machine. :exclamation: :exclamation: :exclamation: <br />
+
+> **Note** <br />
+> :exclamation: :exclamation: :exclamation: Your config and credentials are stored in your Home directory. For example: C:\Users\username\.aws. You can view files in that folder. :exclamation: :exclamation: :exclamation: <br />
 ___
 
 ## Commands
