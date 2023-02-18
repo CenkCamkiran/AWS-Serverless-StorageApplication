@@ -40,9 +40,10 @@ namespace AWS_Serverless_StorageApplication.Controllers
             {
                 Stream stream = objectResponse.ResponseStream;
 
-                return File(stream, Path.GetExtension(objectname), objectResponse.Key);
+                //MediaTypeNames.Application.Octet
+                return File(stream, "application/octet-stream", objectResponse.Key);
             }
-            catch (Exception exception)
+             catch (Exception exception)
             {
                 StorageApplicationError error = new StorageApplicationError();
                 error.Message = exception.Message;
