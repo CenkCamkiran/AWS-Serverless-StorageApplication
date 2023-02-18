@@ -196,6 +196,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
+              },
               "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj": {
                 "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Models\\AWS-Serverless-StorageApplication.Models.csproj"
               }
@@ -211,6 +214,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.SecretsManager": {
+              "target": "Package",
+              "version": "[3.7.101.32, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -430,6 +443,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj": {
+                "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.EnvConfiguration\\AWS-Serverless-StorageApplication.EnvConfiguration.csproj"
+              },
               "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj": {
                 "projectPath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.Helpers\\AWS-Serverless-StorageApplication.Helpers.csproj"
               },

@@ -1,4 +1,5 @@
-﻿using AWS_Serverless_StorageApplication.Helpers;
+﻿using AWS_Serverless_StorageApplication.EnvConfiguration;
+using AWS_Serverless_StorageApplication.Helpers;
 using AWS_Serverless_StorageApplication.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -52,7 +53,8 @@ namespace AWS_Serverless_StorageApplication.Middleware
                 throw new StorageApplicationException(JsonConvert.SerializeObject(error));
             }
 
-            long fileLength = Convert.ToInt64(Environment.GetEnvironmentVariable("FILE_LENGTH_LIMIT"));
+            var envVariables = EnvVariablesConfiguration.AWSCredentials();
+            long fileLength = Convert.ToInt64(envVariables.FileLengthLimit);
             if (file.Length == fileLength)
             {
                 StorageApplicationError error = new StorageApplicationError();

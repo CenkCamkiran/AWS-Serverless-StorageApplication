@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PuV1k8F4RlrHFQy8Uea7tfpB9t2ptyqDDt17PX85fbNbq6rKk8ZLlxaqgvo3pS98dWOWCDNH5yq/o1Cq+EmA6Q==",
+  "dgSpecHash": "fnAC3lfOjE54YYcctSmkQztkagZAPB9khjtLbR6eAb8FXgUCNaWMHOnud+4XSGBbEi972qgTEri+fLxTCXNxZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\camki\\Desktop\\Kişisel\\Amazon\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication\\AWS-Serverless-StorageApplication.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,9 @@
     "C:\\Users\\camki\\.nuget\\packages\\amazon.lambda.core\\2.1.0\\amazon.lambda.core.2.1.0.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\amazon.lambda.logging.aspnetcore\\3.1.0\\amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.3.0\\amazon.lambda.serialization.systemtextjson.2.3.0.nupkg.sha512",
-    "C:\\Users\\camki\\.nuget\\packages\\awssdk.core\\3.7.103.24\\awssdk.core.3.7.103.24.nupkg.sha512",
+    "C:\\Users\\camki\\.nuget\\packages\\awssdk.core\\3.7.105.6\\awssdk.core.3.7.105.6.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\awssdk.s3\\3.7.102\\awssdk.s3.3.7.102.nupkg.sha512",
+    "C:\\Users\\camki\\.nuget\\packages\\awssdk.secretsmanager\\3.7.101.32\\awssdk.secretsmanager.3.7.101.32.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\camki\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

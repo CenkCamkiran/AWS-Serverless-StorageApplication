@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.101.32" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.Helpers\AWS-Serverless-StorageApplication.Helpers.csproj" />
     <ProjectReference Include="..\AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj" />
   </ItemGroup>
 

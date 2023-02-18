@@ -14,7 +14,8 @@
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\camki\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\camki\.nuget\packages\awssdk.core\3.7.103.24</PkgAWSSDK_Core>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\camki\.nuget\packages\awssdk.core\3.7.105.6</PkgAWSSDK_Core>
+    <PkgAWSSDK_SecretsManager Condition=" '$(PkgAWSSDK_SecretsManager)' == '' ">C:\Users\camki\.nuget\packages\awssdk.secretsmanager\3.7.101.32</PkgAWSSDK_SecretsManager>
     <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\camki\.nuget\packages\awssdk.s3\3.7.102</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>

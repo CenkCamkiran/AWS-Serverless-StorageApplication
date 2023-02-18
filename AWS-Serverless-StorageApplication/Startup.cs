@@ -49,8 +49,7 @@ public class Startup
 
         services.AddScoped<IS3ObjectStorageRepository, S3ObjectStorageRepository>();
 
-        EnvVariablesConfiguration envVariables = new EnvVariablesConfiguration();
-        AWSCredentials awsCredentials = envVariables.AWSCredentials();
+        AWSCredentials awsCredentials = EnvVariablesConfiguration.AWSCredentials();
         Console.WriteLine("AWS Access Key: " + awsCredentials.AccessKey);
         Console.WriteLine("AWS Secret Key: " + awsCredentials.SecretKey);
         Console.WriteLine("FILE_LENGTH_LIMIT: " + Environment.GetEnvironmentVariable("FILE_LENGTH_LIMIT"));

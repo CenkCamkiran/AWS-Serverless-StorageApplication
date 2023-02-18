@@ -4,5 +4,6 @@
     {
         public string AccessKey { get; set; } = string.Empty;
         public string SecretKey { get; set; } = string.Empty;
+        public string FileLengthLimit { get; set; } = string.Empty;
     }
 }

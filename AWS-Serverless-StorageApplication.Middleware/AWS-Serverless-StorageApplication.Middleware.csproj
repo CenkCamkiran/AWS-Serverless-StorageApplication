@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AWS-Serverless-StorageApplication.EnvConfiguration\AWS-Serverless-StorageApplication.EnvConfiguration.csproj" />
     <ProjectReference Include="..\AWS-Serverless-StorageApplication.Helpers\AWS-Serverless-StorageApplication.Helpers.csproj" />
     <ProjectReference Include="..\AWS-Serverless-StorageApplication.Models\AWS-Serverless-StorageApplication.Models.csproj" />
   </ItemGroup>
