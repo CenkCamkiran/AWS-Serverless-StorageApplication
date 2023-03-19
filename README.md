@@ -581,7 +581,4 @@ I am open every advice for my project. I am planning to improve myself on **.NET
 # Bug Reports & Feature Requests
 
 Please use the Github issues.
-
-# RoadMap
-
-- I am planning to improve myself on AWS Lambda Functions.
+ 
